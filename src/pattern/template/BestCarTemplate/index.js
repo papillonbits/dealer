@@ -1,0 +1,1 @@
+export { BestCarTemplate } from './BestCarTemplate'

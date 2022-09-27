@@ -1,0 +1,71 @@
+@import '~@papillonbits/css/build/primer/support/mixins/layout.scss';
+@import '../../../index.scss';
+
+.container {
+  @include container;
+}
+
+.alert {
+  margin-bottom: -20px;
+}
+
+.content {
+  &Display {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    &Grid {
+      &BestCars {
+        margin: 20px 0;
+        min-width: 544px;
+      }
+    }
+
+    &Search {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(md) {
+        flex-direction: row;
+      }
+
+      &Part {
+        width: 100%;
+
+        &Field {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 15px;
+          margin-bottom: 15px;
+
+          @include breakpoint(md) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+
+          &Input {
+            width: 100%;
+          }
+
+          &Label {
+            margin-top: 2px;
+            padding: 5px;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+
+    &Pagination {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+
+      @include breakpoint(md) {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

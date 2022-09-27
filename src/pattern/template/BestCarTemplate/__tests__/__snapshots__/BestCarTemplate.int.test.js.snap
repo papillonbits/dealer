@@ -1,0 +1,1175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BestCarTemplate /> Render must match regular() 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="alert"
+    >
+      <div
+        class="flash-messages"
+      >
+        <div
+          class="flash flash-success"
+        >
+          <mock-file
+            aria-hidden="true"
+            classname="mr-2"
+            height="16"
+            role="img"
+            style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
+            viewbox="0 0 16 16"
+            width="16"
+          />
+          Ready...
+        </div>
+      </div>
+    </div>
+    <div
+      class="navigator"
+    >
+      <div
+        class="navigatorHeading Subhead"
+      >
+        <div
+          class="Subhead-heading"
+        >
+          Best Cars
+        </div>
+      </div>
+      <div
+        class="tabnav"
+      >
+        <nav
+          aria-label="List Cars"
+          class="tabnav-tabs"
+        >
+          <a
+            aria-current="page"
+            class="tabnav-tab"
+            href="/list"
+          >
+            List Cars
+          </a>
+          <a
+            class="tabnav-tab"
+            href="/best"
+          >
+            Best Cars
+          </a>
+        </nav>
+      </div>
+      <div
+        class="navigatorHeading Subhead"
+      >
+        <div
+          class="Subhead-heading"
+        >
+          Top Deals
+        </div>
+      </div>
+    </div>
+    <div
+      class="content"
+    >
+      <div
+        class="contentDisplay"
+      >
+        <div
+          class="contentDisplaySearch"
+        >
+          <div
+            class="contentDisplaySearchPart"
+          >
+            <div
+              class="contentDisplaySearchPartField"
+            >
+              <span
+                class="contentDisplaySearchPartFieldLabel IssueLabel bg-blue text-white"
+                title="Label: Fuel Price (€/L). Enter a value between 0.5 and 2"
+              >
+                Fuel Price (€/L). Enter a value between 0.5 and 2
+              </span>
+              <input
+                aria-label="Type in fuel price"
+                class="contentDisplaySearchPartFieldInput form-control"
+                placeholder="Type fuel price and press Enter to search. Press ESC to clear."
+                type="text"
+                value="0.73"
+              />
+            </div>
+            <div
+              class="contentDisplaySearchPartField"
+            >
+              <span
+                class="contentDisplaySearchPartFieldLabel IssueLabel bg-blue text-white"
+                title="Label: Period (number of years). Enter a value between 1 and 10"
+              >
+                Period (number of years). Enter a value between 1 and 10
+              </span>
+              <input
+                aria-label="Type in year period"
+                class="contentDisplaySearchPartFieldInput form-control"
+                placeholder="Type year period and press Enter to search. Press ESC to clear."
+                type="text"
+                value="4"
+              />
+            </div>
+          </div>
+          <div
+            class="contentDisplaySearchPart"
+          >
+            <div
+              class="contentDisplaySearchPartField"
+            >
+              <span
+                class="contentDisplaySearchPartFieldLabel IssueLabel bg-blue text-white"
+                title="Label: Montly Travel Distance (km). Enter a value between 100 and 2000"
+              >
+                Montly Travel Distance (km). Enter a value between 100 and 2000
+              </span>
+              <input
+                aria-label="Type in monthly travel distance"
+                class="contentDisplaySearchPartFieldInput form-control"
+                placeholder="Type monthly travel distance and press Enter to search. Press ESC to clear."
+                type="text"
+                value="250"
+              />
+            </div>
+          </div>
+        </div>
+        <nav
+          aria-label="Pagination Top"
+          class="contentDisplayPagination paginate-container"
+        >
+          <div
+            class="pagination d-flex"
+          >
+            <span
+              aria-disabled="true"
+            >
+              &lt;
+            </span>
+            <span>
+              Viewing 1 to 3
+            </span>
+            <a
+              aria-label="Next"
+              href="#url"
+              rel="next"
+            >
+              &gt;
+            </a>
+          </div>
+        </nav>
+        <div
+          class="contentDisplayGridBestCars"
+        >
+          <div
+            class="d-flex flex-row flex-items-start bg-blue-light border"
+          >
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-2 flex-justify-center"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="m-0 form-checkbox"
+              >
+                <label
+                  for="checkbox"
+                >
+                  <input
+                    aria-describedby="isSelected"
+                    type="checkbox"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  License
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Brand
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Model
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Year
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Bodywork
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Color
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Fuel
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Transmission
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Consumption
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Cost
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Maintenance
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                >
+                  <span
+                    class="ml-1 text-gray-light"
+                  >
+                     |
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="h6 d-flex flex-row p-2 css-truncate css-truncate-overflow item col-12 flex-justify-between"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="d-flex flex-justify-between width-full"
+              >
+                <div
+                  class="css-truncate css-truncate-overflow"
+                >
+                  Price
+                </div>
+                <div
+                  class="d-flex flex-items-start ml-1"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-row flex-items-start border item row"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-2 flex-justify-center"
+            >
+              <div
+                class="m-0 form-checkbox"
+              >
+                <label
+                  for="checkbox"
+                >
+                  <input
+                    aria-describedby="isSelected"
+                    type="checkbox"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                U-758-R
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Alfa Romeo
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                GTV
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                1958
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                MPV
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Other colors
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Other fuels
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Automatic
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                23.7
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                61479.62
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                4055
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                44890
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-row flex-items-start border item row"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-2 flex-justify-center"
+            >
+              <div
+                class="m-0 form-checkbox"
+              >
+                <label
+                  for="checkbox"
+                >
+                  <input
+                    aria-describedby="isSelected"
+                    type="checkbox"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                N-534-ZT
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Ford
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Focus
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                1954
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Convertible
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Blue
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                LPG
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Automatic
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                9.36
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                59684.90
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                910
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                55109
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-row flex-items-start border item row"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-2 flex-justify-center"
+            >
+              <div
+                class="m-0 form-checkbox"
+              >
+                <label
+                  for="checkbox"
+                >
+                  <input
+                    aria-describedby="isSelected"
+                    type="checkbox"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                EG-438-WX
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Saab
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                900
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                1997
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Other bodyworks
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Black
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Gasoline
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Automatic
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                6.19
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                29512.19
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                4539
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                9941
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-row flex-items-start border item row"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-2 flex-justify-center"
+            >
+              <div
+                class="m-0 form-checkbox"
+              >
+                <label
+                  for="checkbox"
+                >
+                  <input
+                    aria-describedby="isSelected"
+                    type="checkbox"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                D-606-M
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Lamborghini
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Reventon
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                1925
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                SUV
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                White
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Diesel
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Manual
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                15.03
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                29351.83
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                4445
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                10989
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-row flex-items-start border item row"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-2 flex-justify-center"
+            >
+              <div
+                class="m-0 form-checkbox"
+              >
+                <label
+                  for="checkbox"
+                >
+                  <input
+                    aria-describedby="isSelected"
+                    type="checkbox"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                N-856-4
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Subaru
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Mini-jumbo
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                2019
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Station wagon
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                White
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                LPG
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                Manual
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                18.4
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                32132.09
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                2042
+              </div>
+            </div>
+            <div
+              class="d-flex flex-row p-2 css-truncate css-truncate-overflow no-wrap col-12 flex-justify-start"
+            >
+              <div
+                class="css-truncate css-truncate-overflow"
+              >
+                23488
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav
+          aria-label="Pagination Bottom"
+          class="contentDisplayPagination paginate-container"
+        >
+          <div
+            class="pagination d-flex"
+          >
+            <span
+              aria-disabled="true"
+            >
+              &lt;
+            </span>
+            <span>
+              Viewing 1 to 3
+            </span>
+            <a
+              aria-label="Next"
+              href="#url"
+              rel="next"
+            >
+              &gt;
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div
+      class="alert"
+    >
+      <div
+        class="flash-messages"
+      >
+        <div
+          class="flash flash-success"
+        >
+          <mock-file
+            aria-hidden="true"
+            classname="mr-2"
+            height="16"
+            role="img"
+            style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
+            viewbox="0 0 16 16"
+            width="16"
+          />
+          Ready...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
