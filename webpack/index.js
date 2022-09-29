@@ -11,7 +11,7 @@ export { getCleanWebpackPluginStandardSetup, getCleanWebpackPluginAdvancedSetup 
 export { getCopyWebpackPluginStandardSetup } from './plugin/copyWebpackPlugin'
 export { getCSSMinimizerWebpackPluginStandardSetup } from './plugin/cssMinimizerWebpackPlugin'
 export { getDotenvWebpackStandardSetup, getDotenvWebpackAdvancedSetup } from './plugin/dotenvWebpack'
-export { getHtmlWebpackPluginAdvancedSetup } from './plugin/htmlWebpackPlugin'
+export { getHtmlWebpackPluginStandardSetup, getHtmlWebpackPluginAdvancedSetup } from './plugin/htmlWebpackPlugin'
 export {
   MiniCSSExtractPluginLoader,
   getMiniCSSExtractPluginStandardSetup,

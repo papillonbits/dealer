@@ -9,7 +9,7 @@ import {
   getCleanWebpackPluginStandardSetup,
   getCopyWebpackPluginStandardSetup,
   getDotenvWebpackStandardSetup,
-  getHtmlWebpackPluginAdvancedSetup,
+  getHtmlWebpackPluginStandardSetup,
   getWebpackManifestPluginStandardSetup,
 } from '../../../webpack'
 
@@ -24,14 +24,7 @@ export const webpackCommonSetup = {
     getCleanWebpackPluginStandardSetup(),
     getCopyWebpackPluginStandardSetup({ from: publicFolderPath, to: 'assets' }),
     getDotenvWebpackStandardSetup({ path: './.env.develop' }),
-    getHtmlWebpackPluginAdvancedSetup({
-      title: 'Dealer',
-      meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-      template: `${compileFolderPath}/index.html`,
-      filename: 'index.html',
-      inject: 'body',
-      scriptLoading: 'defer',
-    }),
+    getHtmlWebpackPluginStandardSetup({ title: 'Dealer', compileFolderPath }),
     getWebpackManifestPluginStandardSetup(),
   ],
   module: {
