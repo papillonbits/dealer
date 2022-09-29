@@ -1,11 +1,11 @@
 /* eslint-disable import/no-import-module-exports */
 
 import {
-  setupBabelLoaderAdvanced,
-  setupCleanWebpackPluginStandard,
-  setupCopyWebpackPluginStandard,
-  setupDotenvWebpackStandard,
-  setupHtmlWebpackPluginAdvanced,
+  getBabelLoaderAdvancedSetup,
+  getCleanWebpackPluginStandardSetup,
+  getCopyWebpackPluginStandardSetup,
+  getDotenvWebpackStandardSetup,
+  getHtmlWebpackPluginAdvancedSetup,
 } from '../../../webpack'
 
 const paths = require('./paths')
@@ -18,10 +18,10 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    setupCleanWebpackPluginStandard(),
-    setupCopyWebpackPluginStandard({ from: paths.public, to: 'assets' }),
-    setupDotenvWebpackStandard({ path: './.env.develop' }),
-    setupHtmlWebpackPluginAdvanced({
+    getCleanWebpackPluginStandardSetup(),
+    getCopyWebpackPluginStandardSetup({ from: paths.public, to: 'assets' }),
+    getDotenvWebpackStandardSetup({ path: './.env.develop' }),
+    getHtmlWebpackPluginAdvancedSetup({
       title: 'Dealer',
       meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       template: 'compile/template.html',
@@ -31,7 +31,7 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [setupBabelLoaderAdvanced()],
+    rules: [getBabelLoaderAdvancedSetup()],
   },
 
   resolve: {

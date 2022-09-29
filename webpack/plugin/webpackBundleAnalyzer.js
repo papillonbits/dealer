@@ -2,6 +2,6 @@
 
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export function setupWebpackBundleAnalyzerStandard() {
+export function getWebpackBundleAnalyzerStandardSetup() {
   return new BundleAnalyzerPlugin()
 }

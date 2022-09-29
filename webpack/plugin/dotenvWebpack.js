@@ -2,11 +2,11 @@
 
 import DotenvWebpack from 'dotenv-webpack'
 
-export function setupDotenvWebpackStandard({ path }) {
+export function getDotenvWebpackStandardSetup({ path }) {
   return new DotenvWebpack({ path })
 }
 
-export function setupDotenvWebpackAdvanced({ path, safe, allowEmptyValues, systemvars, silent, defaults, prefix }) {
+export function getDotenvWebpackAdvancedSetup({ path, safe, allowEmptyValues, systemvars, silent, defaults, prefix }) {
   return new DotenvWebpack({
     path,
     safe,

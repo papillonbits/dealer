@@ -2,11 +2,11 @@
 
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
-export function setupCleanWebpackPluginStandard() {
+export function getCleanWebpackPluginStandardSetup() {
   return new CleanWebpackPlugin()
 }
 
-export function setupCleanWebpackPluginAdvanced({
+export function getCleanWebpackPluginAdvancedSetup({
   dry,
   verbose,
   cleanStaleWebpackAssets,

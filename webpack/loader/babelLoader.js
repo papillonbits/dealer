@@ -2,7 +2,7 @@
 
 import { coreJSVersion, targetBrowsers } from '../constant'
 
-export function setupBabelLoaderAdvanced() {
+export function getBabelLoaderAdvancedSetup() {
   return {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,

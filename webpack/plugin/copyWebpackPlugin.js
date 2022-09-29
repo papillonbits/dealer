@@ -2,7 +2,7 @@
 
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 
-export function setupCopyWebpackPluginStandard({ from, to }) {
+export function getCopyWebpackPluginStandardSetup({ from, to }) {
   return new CopyWebpackPlugin({
     patterns: [
       {
