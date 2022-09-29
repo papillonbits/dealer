@@ -4,10 +4,9 @@ import {
   setupCleanWebpackPluginStandard,
   setupCopyWebpackPluginStandard,
   setupDotenvWebpackStandard,
+  setupHtmlWebpackPluginAdvanced,
   // setupWebpackBundleAnalyzerStandard,
 } from '../../../webpack/plugin'
-
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const paths = require('./paths')
 const pkg = require('../package.json')
@@ -23,18 +22,15 @@ module.exports = {
     setupCleanWebpackPluginStandard(),
     setupCopyWebpackPluginStandard({ from: paths.public, to: 'assets' }),
     setupDotenvWebpackStandard({ path: './.env.develop' }),
-    // setupWebpackBundleAnalyzerStandard(),
-    new HtmlWebpackPlugin({
+    setupHtmlWebpackPluginAdvanced({
       title: 'Dealer',
-      meta: {
-        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-      },
-      // favicon: `${paths.src}/images/favicon.png`,
+      meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       template: 'compile/template.html',
       filename: 'index.html',
       inject: 'body',
       scriptLoading: 'defer',
     }),
+    // setupWebpackBundleAnalyzerStandard(),
   ],
   module: {
     rules: [

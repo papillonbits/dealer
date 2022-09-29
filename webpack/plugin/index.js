@@ -1,4 +1,5 @@
 export { setupCleanWebpackPluginStandard, setupCleanWebpackPluginAdvanced } from './cleanWebpackPlugin'
 export { setupCopyWebpackPluginStandard } from './copyWebpackPlugin'
 export { setupDotenvWebpackStandard, setupDotenvWebpackAdvanced } from './dotenvWebpack'
+export { setupHtmlWebpackPluginAdvanced } from './htmlWebpackPlugin'
 export { setupWebpackBundleAnalyzerStandard } from './webpackBundleAnalyzer'
