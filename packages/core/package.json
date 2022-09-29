@@ -1,0 +1,64 @@
+{
+  "name": "@papillonbits/dealer-core-microsite",
+  "version": "1.0.0",
+  "description": "Dealer Core Microsite",
+  "homepage": "https://github.com/papillonbits/dealer/tree/master/packages/core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papillonbits/dealer.git",
+    "directory": "packages/core"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "keywords": [
+    "dealer core microsite"
+  ],
+  "author": {
+    "name": "MTS",
+    "url": "https://github.com/mts"
+  },
+  "scripts": {
+    "clean-up": "rm -rf build node_modules package-lock.json",
+    "install-packages": "npm install",
+    "install-papillonbits-latest": "echo \"docs skipping install-papillonbits-latest\" && exit 0",
+    "make-404-page": "cp build/index.html build/404.html",
+    "build-test": "webpack --config webpack.test.js --progress --hide-modules && npm run make-404-page",
+    "build-acceptance": "webpack --config webpack.acceptance.js --progress --hide-modules && npm run make-404-page",
+    "build-release": "webpack --config webpack.release.js --progress --hide-modules && npm run make-404-page",
+    "start": "nodemon --watch compile/webpack.common.js --watch compile/webpack.dev.js --exec \"webpack serve --config compile/webpack.dev.js\""
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR"
+    ],
+    "legacyBrowsers": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR"
+    ],
+    "modernBrowsers": [
+      "last 2 Chrome versions",
+      "not Chrome < 60",
+      "last 2 Safari versions",
+      "not Safari < 10.1",
+      "last 2 iOS versions",
+      "not iOS < 10.3",
+      "last 2 Firefox versions",
+      "not Firefox < 54",
+      "last 2 Edge versions",
+      "not Edge < 15"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
