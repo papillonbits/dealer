@@ -1,4 +1,3 @@
-/* eslint-disable import/no-import-module-exports */
 import { compileFolderPath, nodeModulesFolderPath, srcFolderPath, buildFolderPath, publicFolderPath } from './constant'
 
 import {
@@ -9,7 +8,7 @@ import {
   getHtmlWebpackPluginAdvancedSetup,
 } from '../../../webpack'
 
-module.exports = {
+export const webpackCommonSetup = {
   entry: [`${srcFolderPath}/index.js`],
   output: {
     path: buildFolderPath,

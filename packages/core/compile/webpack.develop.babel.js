@@ -1,10 +1,10 @@
 /* eslint-disable import/no-import-module-exports */
+import { merge } from 'webpack-merge'
 import { nodeModulesFolderPath, srcFolderPath } from './constant'
+import { getSVGRWebpackLoaderAdvancedSetup } from '../../../webpack'
+import { webpackCommonSetup } from './webpack.common'
 
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common')
-
-module.exports = merge(common, {
+module.exports = merge(webpackCommonSetup, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
@@ -16,12 +16,7 @@ module.exports = merge(common, {
   },
   module: {
     rules: [
-      {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
-        use: ['@svgr/webpack'],
-      },
+      getSVGRWebpackLoaderAdvancedSetup(),
       {
         // test: /\.s[ac]ss$/i,
         test: /\.(sass|scss|css)$/,
