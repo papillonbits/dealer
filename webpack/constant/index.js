@@ -37,3 +37,5 @@ export const targetBrowsers = {
     'not Edge < 15',
   ],
 }
+
+export const manifestFileName = 'manifest.json'

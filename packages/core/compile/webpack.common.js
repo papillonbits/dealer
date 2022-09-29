@@ -10,6 +10,7 @@ import {
   getCopyWebpackPluginStandardSetup,
   getDotenvWebpackStandardSetup,
   getHtmlWebpackPluginAdvancedSetup,
+  getWebpackManifestPluginStandardSetup,
 } from '../../../webpack'
 
 export const webpackCommonSetup = {
@@ -31,6 +32,7 @@ export const webpackCommonSetup = {
       inject: 'body',
       scriptLoading: 'defer',
     }),
+    getWebpackManifestPluginStandardSetup(),
   ],
   module: {
     rules: [

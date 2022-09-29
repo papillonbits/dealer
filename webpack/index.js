@@ -18,3 +18,4 @@ export {
   getMiniCSSExtractPluginAdvancedSetup,
 } from './plugin/miniCSSExtractPlugin'
 export { getWebpackBundleAnalyzerStandardSetup } from './plugin/webpackBundleAnalyzer'
+export { getWebpackManifestPluginStandardSetup } from './plugin/webpackManifestPlugin'
