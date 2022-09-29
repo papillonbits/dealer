@@ -9,8 +9,6 @@ import {
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const webpack = require('webpack')
-
 const paths = require('./paths')
 const pkg = require('../package.json')
 
@@ -26,9 +24,6 @@ module.exports = {
     setupCopyWebpackPluginStandard({ from: paths.public, to: 'assets' }),
     setupDotenvWebpackStandard({ path: './.env.develop' }),
     // setupWebpackBundleAnalyzerStandard(),
-    new webpack.ProvidePlugin({
-      process: 'process/browser',
-    }),
     new HtmlWebpackPlugin({
       title: 'Dealer',
       meta: {
