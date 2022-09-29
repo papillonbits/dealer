@@ -1,32 +1,10 @@
 const { merge } = require('webpack-merge')
-
 const common = require('./webpack.common')
-
 const paths = require('./paths')
 
-// console.log('~mts~', paths) // eslint-disable-line
-
-// console.log('~mts~', [
-//   `${paths.src}/**/**/**/**`,
-//   `${paths.node}/@papillonbits/components/build/**/**/**`,
-//   `${paths.node}/@papillonbits/css/build/**/**/**`,
-// ])
-
-// ~mts~ {
-//   node: '/Users/mts/PapillonBitsHub/dealer/node_modules',
-//   src: '/Users/mts/PapillonBitsHub/dealer/src',
-//   build: '/Users/mts/PapillonBitsHub/dealer/dist',
-//   public: '/Users/mts/PapillonBitsHub/dealer/public'
-// }
-
-const config = merge(common, {
-  // Set the mode to development or production
+module.exports = merge(common, {
   mode: 'development',
-
-  // Control how source maps are generated
   devtool: 'inline-source-map',
-
-  // Spin up a server for quick development
   devServer: {
     historyApiFallback: true,
     open: true,
@@ -34,7 +12,6 @@ const config = merge(common, {
     hot: true,
     port: 8080,
   },
-
   module: {
     rules: [
       {
@@ -43,7 +20,6 @@ const config = merge(common, {
         resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
         use: ['@svgr/webpack'],
       },
-      // Styles: Inject CSS into the head with source maps
       {
         // test: /\.s[ac]ss$/i,
         test: /\.(sass|scss|css)$/,
@@ -87,7 +63,3 @@ const config = merge(common, {
     ],
   },
 })
-
-// console.log('~mts~', JSON.stringify(config)) // eslint-disable-line
-
-module.exports = config
