@@ -1,14 +1,12 @@
 // https://github.com/webpack-contrib/css-loader
 
-export function getCSSLoaderStandardSetup() {
+export function getCSSLoaderStandardSetup({ sourceMap, modules }) {
   return {
     loader: 'css-loader',
     options: {
       importLoaders: 2,
-      sourceMap: true,
-      modules: {
-        localIdentName: '[name]_[local]_[hash:base64:5]',
-      },
+      sourceMap,
+      modules,
     },
   }
 }

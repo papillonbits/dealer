@@ -21,11 +21,9 @@ module.exports = merge(webpackCommonSetup, {
         include: includedSourcePaths,
         use: [
           'style-loader',
-          getCSSLoaderStandardSetup(),
+          getCSSLoaderStandardSetup({ sourceMap: false, modules: { localIdentName: '[name]_[local]_[hash:base64:5]' } }),
           getPostCSSLoaderStandardSetup(),
-          getSassLoaderStandardSetup({
-            includedSourcePaths,
-          }),
+          getSassLoaderStandardSetup({ includedSourcePaths }),
         ],
       },
     ],
