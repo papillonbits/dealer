@@ -24,9 +24,9 @@
     "install-packages": "npm install",
     "install-papillonbits-latest": "echo \"docs skipping install-papillonbits-latest\" && exit 0",
     "make-404-page": "cp build/index.html build/404.html",
-    "build-test": "webpack --config webpack.test.js --progress --hide-modules && npm run make-404-page",
-    "build-acceptance": "webpack --config webpack.acceptance.js --progress --hide-modules && npm run make-404-page",
-    "build-release": "webpack --config webpack.release.js --progress --hide-modules && npm run make-404-page",
+    "build-test": "webpack --config compile/webpack.test.js --progress && npm run make-404-page",
+    "build-acceptance": "webpack --config compile/webpack.acceptance.js --progress && npm run make-404-page",
+    "build-release": "webpack --config compile/webpack.release.babel.js --progress && npm run make-404-page",
     "start": "nodemon --watch compile/webpack.common.js --watch compile/webpack.develop.babel.js --exec \"webpack serve --config compile/webpack.develop.babel.js\""
   }
 }
