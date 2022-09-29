@@ -2,9 +2,12 @@
 import { merge } from 'webpack-merge'
 import { buildFolderPath } from './constant'
 import { webpackCommonSetup } from './webpack.common'
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+import {
+  getCSSLoaderStandardSetup,
+  getCSSMinimizerWebpackPluginStandardSetup,
+  MiniCSSExtractPluginLoader,
+  getMiniCSSExtractPluginAdvancedSetup,
+} from '../../../webpack'
 
 module.exports = merge(webpackCommonSetup, {
   mode: 'production',
@@ -19,34 +22,19 @@ module.exports = merge(webpackCommonSetup, {
       {
         test: /\.(sass|scss|css)$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2,
-              sourceMap: false,
-              modules: false,
-            },
-          },
+          MiniCSSExtractPluginLoader,
+          getCSSLoaderStandardSetup({ sourceMap: false, modules: { localIdentName: '[name]_[local]_[hash:base64:5]' } }),
           'postcss-loader',
           'sass-loader',
         ],
       },
     ],
   },
-  plugins: [
-    // Extracts CSS into separate files
-    new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
-      chunkFilename: '[id].css',
-    }),
-  ],
+  plugins: [getMiniCSSExtractPluginAdvancedSetup()],
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), '...'],
-    runtimeChunk: {
-      name: 'runtime',
-    },
+    minimizer: [getCSSMinimizerWebpackPluginStandardSetup(), '...'],
+    runtimeChunk: { name: 'runtime' },
   },
   performance: {
     hints: false,
