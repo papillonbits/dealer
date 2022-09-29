@@ -1,13 +1,8 @@
 /* eslint-disable import/no-import-module-exports */
 import { merge } from 'webpack-merge'
 import { nodeModulesFolderPath, srcFolderPath } from './constant'
-import {
-  getCSSLoaderStandardSetup,
-  getPostCSSLoaderStandardSetup,
-  getSassLoaderStandardSetup,
-  getSVGRWebpackLoaderAdvancedSetup,
-} from '../../../webpack'
 import { webpackCommonSetup } from './webpack.common'
+import { getCSSLoaderStandardSetup, getPostCSSLoaderStandardSetup, getSassLoaderStandardSetup } from '../../../webpack'
 
 module.exports = merge(webpackCommonSetup, {
   mode: 'development',
@@ -41,7 +36,6 @@ module.exports = merge(webpackCommonSetup, {
           }),
         ],
       },
-      getSVGRWebpackLoaderAdvancedSetup(),
     ],
   },
 })

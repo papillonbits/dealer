@@ -1,13 +1,12 @@
 /* eslint-disable import/no-import-module-exports */
+import { merge } from 'webpack-merge'
 import { buildFolderPath } from './constant'
+import { webpackCommonSetup } from './webpack.common'
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const { merge } = require('webpack-merge')
 
-const common = require('./webpack.common')
-
-module.exports = merge(common, {
+module.exports = merge(webpackCommonSetup, {
   mode: 'production',
   devtool: false,
   output: {

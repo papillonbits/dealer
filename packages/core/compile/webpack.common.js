@@ -2,6 +2,7 @@ import { compileFolderPath, nodeModulesFolderPath, srcFolderPath, buildFolderPat
 
 import {
   getBabelLoaderAdvancedSetup,
+  getSVGRWebpackLoaderAdvancedSetup,
   getCleanWebpackPluginStandardSetup,
   getCopyWebpackPluginStandardSetup,
   getDotenvWebpackStandardSetup,
@@ -29,7 +30,7 @@ export const webpackCommonSetup = {
     }),
   ],
   module: {
-    rules: [getBabelLoaderAdvancedSetup()],
+    rules: [getBabelLoaderAdvancedSetup(), getSVGRWebpackLoaderAdvancedSetup()],
   },
 
   resolve: {
