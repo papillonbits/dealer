@@ -1,2 +1,7 @@
 export { monorepo, microsite, environment } from './constant'
-export { CleanWebpackPluginStandardSetup } from './plugin'
+export { setupBabelLoaderAdvanced } from './loader/babelLoader'
+export { setupCleanWebpackPluginStandard, setupCleanWebpackPluginAdvanced } from './plugin/cleanWebpackPlugin'
+export { setupCopyWebpackPluginStandard } from './plugin/copyWebpackPlugin'
+export { setupDotenvWebpackStandard, setupDotenvWebpackAdvanced } from './plugin/dotenvWebpack'
+export { setupHtmlWebpackPluginAdvanced } from './plugin/htmlWebpackPlugin'
+export { setupWebpackBundleAnalyzerStandard } from './plugin/webpackBundleAnalyzer'

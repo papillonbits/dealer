@@ -28,29 +28,5 @@
     "build-acceptance": "webpack --config webpack.acceptance.js --progress --hide-modules && npm run make-404-page",
     "build-release": "webpack --config webpack.release.js --progress --hide-modules && npm run make-404-page",
     "start": "nodemon --watch compile/webpack.common.js --watch compile/webpack.develop.babel.js --exec \"webpack serve --config compile/webpack.develop.babel.js\""
-  },
-  "browserslist": {
-    "production": [
-      "> 1%",
-      "last 2 versions",
-      "Firefox ESR"
-    ],
-    "legacyBrowsers": [
-      "> 1%",
-      "last 2 versions",
-      "Firefox ESR"
-    ],
-    "modernBrowsers": [
-      "last 2 Chrome versions",
-      "not Chrome < 60",
-      "last 2 Safari versions",
-      "not Safari < 10.1",
-      "last 2 iOS versions",
-      "not iOS < 10.3",
-      "last 2 Firefox versions",
-      "not Firefox < 54",
-      "last 2 Edge versions",
-      "not Edge < 15"
-    ]
   }
 }

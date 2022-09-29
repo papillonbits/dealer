@@ -1,15 +1,15 @@
 /* eslint-disable import/no-import-module-exports */
 
 import {
+  setupBabelLoaderAdvanced,
   setupCleanWebpackPluginStandard,
   setupCopyWebpackPluginStandard,
   setupDotenvWebpackStandard,
   setupHtmlWebpackPluginAdvanced,
   // setupWebpackBundleAnalyzerStandard,
-} from '../../../webpack/plugin'
+} from '../../../webpack'
 
 const paths = require('./paths')
-const pkg = require('../package.json')
 
 module.exports = {
   entry: [`${paths.src}/index.js`],
@@ -34,47 +34,7 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/preset-env',
-                {
-                  modules: false,
-                  useBuiltIns: 'entry',
-                  corejs: '3.25.2',
-                  targets: {
-                    browsers: Object.values(pkg.browserslist.legacyBrowsers),
-                  },
-                },
-              ],
-              '@babel/preset-react',
-            ],
-            plugins: [
-              '@babel/plugin-proposal-class-properties',
-              '@babel/plugin-proposal-nullish-coalescing-operator',
-              '@babel/plugin-proposal-object-rest-spread',
-              '@babel/plugin-proposal-optional-catch-binding',
-              '@babel/plugin-proposal-optional-chaining',
-              '@babel/plugin-syntax-dynamic-import',
-              '@babel/plugin-transform-classes',
-              [
-                '@babel/plugin-transform-react-jsx',
-                {
-                  runtime: 'automatic',
-                },
-              ],
-              '@babel/plugin-transform-runtime',
-              '@babel/plugin-transform-spread',
-              'syntax-async-functions',
-            ],
-          },
-        },
-      },
+      setupBabelLoaderAdvanced(),
 
       // Images: Copy image files to build folder
       // { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
