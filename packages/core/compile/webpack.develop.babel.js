@@ -18,9 +18,7 @@ module.exports = merge(webpackCommonSetup, {
     rules: [
       getSVGRWebpackLoaderAdvancedSetup(),
       {
-        // test: /\.s[ac]ss$/i,
-        test: /\.(sass|scss|css)$/,
-        // include: [paths.node, paths.src],
+        test: /\.s[ac]ss$/i,
         include: [
           srcFolderPath,
           `${nodeModulesFolderPath}/@papillonbits/components/build`,
@@ -53,8 +51,6 @@ module.exports = merge(webpackCommonSetup, {
             options: {
               sassOptions: {
                 indentWidth: 4,
-                // implementation: require('node-sass'), // eslint-disable-line
-                // includePaths: [paths.node, paths.src],
                 includePaths: [
                   srcFolderPath,
                   `${nodeModulesFolderPath}/@papillonbits/components/build`,
