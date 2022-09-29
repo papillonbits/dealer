@@ -33,31 +33,7 @@ module.exports = {
     // setupWebpackBundleAnalyzerStandard(),
   ],
   module: {
-    rules: [
-      setupBabelLoaderAdvanced(),
-      {
-        test: /\.(ttf|eot|woff2?)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'fonts/[name].[ext]',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(png|jpe?g|gif|webp)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'img/[name].[hash].[ext]',
-            },
-          },
-        ],
-      },
-    ],
+    rules: [setupBabelLoaderAdvanced()],
   },
 
   resolve: {
