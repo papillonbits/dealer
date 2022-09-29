@@ -1,11 +1,14 @@
 /* eslint-disable import/no-import-module-exports */
 
-import { setupCleanWebpackPluginStandard, setupCopyWebpackPluginStandard } from '../../../webpack/plugin'
+import {
+  setupCleanWebpackPluginStandard,
+  setupCopyWebpackPluginStandard,
+  // setupWebpackBundleAnalyzerStandard,
+} from '../../../webpack/plugin'
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const webpack = require('webpack')
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const paths = require('./paths')
 const pkg = require('../package.json')
@@ -18,7 +21,7 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    // new BundleAnalyzerPlugin(),
+    // setupWebpackBundleAnalyzerStandard(),
     setupCleanWebpackPluginStandard(),
     setupCopyWebpackPluginStandard({ from: paths.public, to: 'assets' }),
     // new Dotenv(),
