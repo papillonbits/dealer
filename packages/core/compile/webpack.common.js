@@ -6,7 +6,6 @@ import {
   setupCopyWebpackPluginStandard,
   setupDotenvWebpackStandard,
   setupHtmlWebpackPluginAdvanced,
-  // setupWebpackBundleAnalyzerStandard,
 } from '../../../webpack'
 
 const paths = require('./paths')
@@ -30,7 +29,6 @@ module.exports = {
       inject: 'body',
       scriptLoading: 'defer',
     }),
-    // setupWebpackBundleAnalyzerStandard(),
   ],
   module: {
     rules: [setupBabelLoaderAdvanced()],
