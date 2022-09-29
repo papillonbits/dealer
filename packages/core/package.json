@@ -27,7 +27,7 @@
     "build-test": "webpack --config webpack.test.js --progress --hide-modules && npm run make-404-page",
     "build-acceptance": "webpack --config webpack.acceptance.js --progress --hide-modules && npm run make-404-page",
     "build-release": "webpack --config webpack.release.js --progress --hide-modules && npm run make-404-page",
-    "start": "nodemon --watch compile/webpack.common.js --watch compile/webpack.dev.js --exec \"webpack serve --config compile/webpack.dev.js\""
+    "start": "nodemon --watch compile/webpack.common.js --watch compile/webpack.develop.js --exec \"webpack serve --config compile/webpack.develop.js\""
   },
   "browserslist": {
     "production": [
