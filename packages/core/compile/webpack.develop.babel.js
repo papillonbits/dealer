@@ -1,7 +1,12 @@
 /* eslint-disable import/no-import-module-exports */
 import { merge } from 'webpack-merge'
 import { nodeModulesFolderPath, srcFolderPath } from './constant'
-import { getSVGRWebpackLoaderAdvancedSetup } from '../../../webpack'
+import {
+  getCSSLoaderStandardSetup,
+  getPostCSSLoaderStandardSetup,
+  getSassLoaderStandardSetup,
+  getSVGRWebpackLoaderAdvancedSetup,
+} from '../../../webpack'
 import { webpackCommonSetup } from './webpack.common'
 
 module.exports = merge(webpackCommonSetup, {
@@ -16,7 +21,6 @@ module.exports = merge(webpackCommonSetup, {
   },
   module: {
     rules: [
-      getSVGRWebpackLoaderAdvancedSetup(),
       {
         test: /\.s[ac]ss$/i,
         include: [
@@ -26,41 +30,18 @@ module.exports = merge(webpackCommonSetup, {
         ],
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2,
-              sourceMap: true,
-              modules: {
-                localIdentName: '[name]_[local]_[hash:base64:5]',
-              },
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                sourceMap: true,
-                plugins: () => ['postcss-preset-env'],
-                parser: 'postcss-scss',
-              },
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sassOptions: {
-                indentWidth: 4,
-                includePaths: [
-                  srcFolderPath,
-                  `${nodeModulesFolderPath}/@papillonbits/components/build`,
-                  `${nodeModulesFolderPath}/@papillonbits/css/build`,
-                ],
-              },
-            },
-          },
+          getCSSLoaderStandardSetup(),
+          getPostCSSLoaderStandardSetup(),
+          getSassLoaderStandardSetup({
+            includePaths: [
+              srcFolderPath,
+              `${nodeModulesFolderPath}/@papillonbits/components/build`,
+              `${nodeModulesFolderPath}/@papillonbits/css/build`,
+            ],
+          }),
         ],
       },
+      getSVGRWebpackLoaderAdvancedSetup(),
     ],
   },
 })
