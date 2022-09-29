@@ -1,5 +1,7 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+/* eslint-disable import/no-import-module-exports */
+
+import { setupCleanWebpackPluginStandard, setupCopyWebpackPluginStandard } from '../../../webpack/plugin'
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const webpack = require('webpack')
@@ -17,19 +19,8 @@ module.exports = {
   },
   plugins: [
     // new BundleAnalyzerPlugin(),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: paths.public,
-          to: 'assets',
-          globOptions: {
-            ignore: ['*.DS_Store'],
-          },
-          noErrorOnMissing: true,
-        },
-      ],
-    }),
+    setupCleanWebpackPluginStandard(),
+    setupCopyWebpackPluginStandard({ from: paths.public, to: 'assets' }),
     // new Dotenv(),
     new webpack.ProvidePlugin({
       process: 'process/browser',
