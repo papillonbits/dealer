@@ -2,7 +2,8 @@ import { compileFolderPath, nodeModulesFolderPath, srcFolderPath, buildFolderPat
 
 import {
   getBabelLoaderAdvancedSetup,
-  getSVGRWebpackLoaderAdvancedSetup,
+  getSVGRLoaderAdvancedSetup,
+  getMarkdownLoaderStandardSetup,
   getCleanWebpackPluginStandardSetup,
   getCopyWebpackPluginStandardSetup,
   getDotenvWebpackStandardSetup,
@@ -30,7 +31,7 @@ export const webpackCommonSetup = {
     }),
   ],
   module: {
-    rules: [getBabelLoaderAdvancedSetup(), getSVGRWebpackLoaderAdvancedSetup()],
+    rules: [getBabelLoaderAdvancedSetup(), getMarkdownLoaderStandardSetup(), getSVGRLoaderAdvancedSetup()],
   },
 
   resolve: {
