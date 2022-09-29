@@ -3,6 +3,7 @@
 import {
   setupCleanWebpackPluginStandard,
   setupCopyWebpackPluginStandard,
+  setupDotenvWebpackStandard,
   // setupWebpackBundleAnalyzerStandard,
 } from '../../../webpack/plugin'
 
@@ -21,10 +22,10 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    // setupWebpackBundleAnalyzerStandard(),
     setupCleanWebpackPluginStandard(),
     setupCopyWebpackPluginStandard({ from: paths.public, to: 'assets' }),
-    // new Dotenv(),
+    setupDotenvWebpackStandard({ path: './.env.develop' }),
+    // setupWebpackBundleAnalyzerStandard(),
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
