@@ -7,6 +7,7 @@ import {
   getPostCSSLoaderStandardSetup,
   getSassLoaderStandardSetup,
   getDotenvWebpackStandardSetup,
+  getHotModuleReplacementPluginStandardSetup,
 } from '../../../webpack'
 
 module.exports = merge(webpackCommonSetup, {
@@ -19,7 +20,7 @@ module.exports = merge(webpackCommonSetup, {
     hot: true,
     port: 8080,
   },
-  plugins: [getDotenvWebpackStandardSetup({ path: environmentVariablesFilePathDevelopment })],
+  plugins: [getDotenvWebpackStandardSetup({ path: environmentVariablesFilePathDevelopment }), getHotModuleReplacementPluginStandardSetup()],
   module: {
     rules: [
       {
