@@ -1,6 +1,6 @@
 /* eslint-disable import/no-import-module-exports */
 import { merge } from 'webpack-merge'
-import { buildFolderPath } from './constant'
+import { micrositeFolderPath } from './constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
@@ -13,7 +13,7 @@ module.exports = merge(webpackCommonSetup, {
   mode: 'production',
   devtool: false,
   output: {
-    path: buildFolderPath,
+    path: micrositeFolderPath.build,
     publicPath: '/',
     filename: 'js/[name].[contenthash].bundle.js',
   },

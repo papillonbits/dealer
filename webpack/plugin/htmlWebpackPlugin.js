@@ -3,11 +3,11 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { indexHTMLName } from '../constant'
 
-export function getHtmlWebpackPluginStandardSetup({ title, compileFolderPath }) {
+export function getHtmlWebpackPluginStandardSetup({ title, micrositeCompileFolderPath }) {
   return new HtmlWebpackPlugin({
     title,
     meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-    template: `${compileFolderPath}/${indexHTMLName}`,
+    template: `${micrositeCompileFolderPath}/${indexHTMLName}`,
     filename: indexHTMLName,
     inject: 'body',
     scriptLoading: 'defer',

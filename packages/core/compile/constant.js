@@ -1,18 +1,22 @@
 const path = require('path')
 
-export const compileFolderPath = path.resolve(__dirname, '../compile')
-export const nodeModulesFolderPath = path.resolve(__dirname, '../../../node_modules')
-export const srcFolderPath = path.resolve(__dirname, '../src')
-export const buildFolderPath = path.resolve(__dirname, '../build')
-export const publicFolderPath = path.resolve(__dirname, '../public')
+export const environmentVariablesFilePath = {
+  development: path.resolve(__dirname, '../.env.develop'),
+  test: path.resolve(__dirname, '../.env.test'),
+  acceptance: path.resolve(__dirname, '../.env.acceptance'),
+  release: path.resolve(__dirname, '../.env.release'),
+}
 
-export const includedSourcePaths = [
-  srcFolderPath,
-  `${nodeModulesFolderPath}/@papillonbits/components/build`,
-  `${nodeModulesFolderPath}/@papillonbits/css/build`,
+export const micrositeFolderPath = {
+  build: path.resolve(__dirname, '../build'),
+  compile: path.resolve(__dirname, '../compile'),
+  nodeModules: path.resolve(__dirname, '../../../node_modules'),
+  public: path.resolve(__dirname, '../public'),
+  src: path.resolve(__dirname, '../src'),
+}
+
+export const includedSourceFilePaths = [
+  micrositeFolderPath.src,
+  `${micrositeFolderPath.nodeModules}/@papillonbits/components/build`,
+  `${micrositeFolderPath.nodeModules}/@papillonbits/css/build`,
 ]
-
-export const environmentVariablesFilePathDevelopment = path.resolve(__dirname, '../.env.develop')
-export const environmentVariablesFilePathTest = path.resolve(__dirname, '../.env.test')
-export const environmentVariablesFilePathAcceptance = path.resolve(__dirname, '../.env.acceptance')
-export const environmentVariablesFilePathRelease = path.resolve(__dirname, '../.env.release')

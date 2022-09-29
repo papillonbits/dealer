@@ -1,4 +1,4 @@
-import { compileFolderPath, nodeModulesFolderPath, srcFolderPath, buildFolderPath, publicFolderPath } from './constant'
+import { micrositeFolderPath } from './constant'
 
 import {
   getBabelLoaderAdvancedSetup,
@@ -14,13 +14,13 @@ import {
 } from '../../../webpack'
 
 export const webpackCommonSetup = {
-  entry: [`${srcFolderPath}/index.js`],
-  output: { path: buildFolderPath, filename: '[name].bundle.js', publicPath: '/' },
+  entry: [`${micrositeFolderPath.src}/index.js`],
+  output: { path: micrositeFolderPath.build, filename: '[name].bundle.js', publicPath: '/' },
   plugins: [
     getCleanWebpackPluginStandardSetup(),
-    getCopyWebpackPluginStandardSetup({ from: publicFolderPath, to: 'assets' }),
+    getCopyWebpackPluginStandardSetup({ from: micrositeFolderPath.public, to: 'assets' }),
     getDotenvWebpackStandardSetup({ path: './.env.develop' }),
-    getHtmlWebpackPluginStandardSetup({ title: 'Dealer', compileFolderPath }),
+    getHtmlWebpackPluginStandardSetup({ title: 'Dealer', micrositeCompileFolderPath: micrositeFolderPath.compile }),
     getWebpackManifestPluginStandardSetup(),
   ],
   module: {
@@ -34,7 +34,7 @@ export const webpackCommonSetup = {
   },
 
   resolve: {
-    modules: [srcFolderPath, nodeModulesFolderPath],
+    modules: [micrositeFolderPath.src, micrositeFolderPath.nodeModules],
     extensions: ['.js', '.jsx', '.json', '.scss'],
   },
 }
