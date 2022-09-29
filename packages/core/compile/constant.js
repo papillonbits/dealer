@@ -11,3 +11,8 @@ export const includedSourcePaths = [
   `${nodeModulesFolderPath}/@papillonbits/components/build`,
   `${nodeModulesFolderPath}/@papillonbits/css/build`,
 ]
+
+export const environmentVariablesFilePathDevelopment = path.resolve(__dirname, '../.env.develop')
+export const environmentVariablesFilePathTest = path.resolve(__dirname, '../.env.test')
+export const environmentVariablesFilePathAcceptance = path.resolve(__dirname, '../.env.acceptance')
+export const environmentVariablesFilePathRelease = path.resolve(__dirname, '../.env.release')

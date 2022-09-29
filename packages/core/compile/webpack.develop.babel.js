@@ -1,8 +1,13 @@
 /* eslint-disable import/no-import-module-exports */
 import { merge } from 'webpack-merge'
-import { includedSourcePaths } from './constant'
+import { includedSourcePaths, environmentVariablesFilePathDevelopment } from './constant'
 import { webpackCommonSetup } from './webpack.common'
-import { getCSSLoaderStandardSetup, getPostCSSLoaderStandardSetup, getSassLoaderStandardSetup } from '../../../webpack'
+import {
+  getCSSLoaderStandardSetup,
+  getPostCSSLoaderStandardSetup,
+  getSassLoaderStandardSetup,
+  getDotenvWebpackStandardSetup,
+} from '../../../webpack'
 
 module.exports = merge(webpackCommonSetup, {
   mode: 'development',
@@ -14,6 +19,7 @@ module.exports = merge(webpackCommonSetup, {
     hot: true,
     port: 8080,
   },
+  plugins: [getDotenvWebpackStandardSetup({ path: environmentVariablesFilePathDevelopment })],
   module: {
     rules: [
       {
