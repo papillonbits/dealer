@@ -15,11 +15,7 @@ import {
 
 export const webpackCommonSetup = {
   entry: [`${srcFolderPath}/index.js`],
-  output: {
-    path: buildFolderPath,
-    filename: '[name].bundle.js',
-    publicPath: '/',
-  },
+  output: { path: buildFolderPath, filename: '[name].bundle.js', publicPath: '/' },
   plugins: [
     getCleanWebpackPluginStandardSetup(),
     getCopyWebpackPluginStandardSetup({ from: publicFolderPath, to: 'assets' }),
