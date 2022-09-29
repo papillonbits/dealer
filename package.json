@@ -149,6 +149,7 @@
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
+    "webpack-manifest-plugin": "^5.0.0",
     "webpack-merge": "^5.8.0"
   }
 }
