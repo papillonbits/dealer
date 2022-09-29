@@ -1,6 +1,6 @@
 /* eslint-disable import/no-import-module-exports */
 import { merge } from 'webpack-merge'
-import { nodeModulesFolderPath, srcFolderPath } from './constant'
+import { includedSourcePaths } from './constant'
 import { webpackCommonSetup } from './webpack.common'
 import { getCSSLoaderStandardSetup, getPostCSSLoaderStandardSetup, getSassLoaderStandardSetup } from '../../../webpack'
 
@@ -18,21 +18,13 @@ module.exports = merge(webpackCommonSetup, {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        include: [
-          srcFolderPath,
-          `${nodeModulesFolderPath}/@papillonbits/components/build`,
-          `${nodeModulesFolderPath}/@papillonbits/css/build`,
-        ],
+        include: includedSourcePaths,
         use: [
           'style-loader',
           getCSSLoaderStandardSetup(),
           getPostCSSLoaderStandardSetup(),
           getSassLoaderStandardSetup({
-            includePaths: [
-              srcFolderPath,
-              `${nodeModulesFolderPath}/@papillonbits/components/build`,
-              `${nodeModulesFolderPath}/@papillonbits/css/build`,
-            ],
+            includedSourcePaths,
           }),
         ],
       },
