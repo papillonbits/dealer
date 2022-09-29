@@ -1,6 +1,8 @@
+/* eslint-disable import/no-import-module-exports */
+import { nodeModulesFolderPath, srcFolderPath } from './constant'
+
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common')
-const paths = require('./paths')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -24,7 +26,11 @@ module.exports = merge(common, {
         // test: /\.s[ac]ss$/i,
         test: /\.(sass|scss|css)$/,
         // include: [paths.node, paths.src],
-        include: [paths.src, `${paths.node}/@papillonbits/components/build`, `${paths.node}/@papillonbits/css/build`],
+        include: [
+          srcFolderPath,
+          `${nodeModulesFolderPath}/@papillonbits/components/build`,
+          `${nodeModulesFolderPath}/@papillonbits/css/build`,
+        ],
         use: [
           'style-loader',
           {
@@ -54,7 +60,11 @@ module.exports = merge(common, {
                 indentWidth: 4,
                 // implementation: require('node-sass'), // eslint-disable-line
                 // includePaths: [paths.node, paths.src],
-                includePaths: [paths.src, `${paths.node}/@papillonbits/components/build`, `${paths.node}/@papillonbits/css/build`],
+                includePaths: [
+                  srcFolderPath,
+                  `${nodeModulesFolderPath}/@papillonbits/components/build`,
+                  `${nodeModulesFolderPath}/@papillonbits/css/build`,
+                ],
               },
             },
           },
