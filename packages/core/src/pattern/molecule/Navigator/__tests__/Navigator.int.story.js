@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import { getAppMockStore } from '@papillonbits/library/store'
 import { withTests } from '@storybook/addon-jest'
 import { state } from '../../../../state'
@@ -21,9 +21,9 @@ export default {
 export function regular() {
   return (
     <Provider store={getAppMockStore(appState)}>
-      <BrowserRouter>
+      <MemoryRouter>
         <Navigator />
-      </BrowserRouter>
+      </MemoryRouter>
     </Provider>
   )
 }
