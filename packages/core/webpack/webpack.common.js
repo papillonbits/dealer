@@ -1,4 +1,4 @@
-import { micrositeFolderPath, resolvedModules, resolvedExtensions } from './webpack.constant'
+import { micrositeFolderPaths, resolvedModules, resolvedExtensions } from './webpack.constant'
 
 import {
   getBabelLoaderAdvancedSetup,
@@ -14,12 +14,12 @@ import {
 } from '../../../webpack'
 
 export const webpackCommonSetup = {
-  entry: [`${micrositeFolderPath.src}/index.js`],
+  entry: [`${micrositeFolderPaths.src}/index.js`],
   plugins: [
     getCleanWebpackPluginStandardSetup(),
-    getCopyWebpackPluginStandardSetup({ from: micrositeFolderPath.public, to: 'assets' }),
+    getCopyWebpackPluginStandardSetup({ from: micrositeFolderPaths.public, to: 'assets' }),
     getDotenvWebpackStandardSetup({ path: './.env.develop' }),
-    getHtmlWebpackPluginStandardSetup({ title: 'Dealer', micrositeWebpackFolderPath: micrositeFolderPath.webpack }),
+    getHtmlWebpackPluginStandardSetup({ title: 'Dealer', micrositeWebpackFolderPath: micrositeFolderPaths.webpack }),
     getWebpackManifestPluginStandardSetup(),
   ],
   module: {

@@ -1,5 +1,5 @@
 import { merge } from 'webpack-merge'
-import { environmentVariablesFilePath, micrositeFolderPath, micrositeUrlPath, includedSourceFilePaths } from './webpack.constant'
+import { environmentVariablesFilePaths, micrositeFolderPaths, micrositeUrlPaths, includedSourceFilePaths } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
@@ -14,12 +14,12 @@ export default merge(webpackCommonSetup, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: getDevServerStandardSetup(),
-  output: { path: micrositeFolderPath.build, publicPath: micrositeUrlPath.development, filename: '[name].bundle.js' },
+  output: { path: micrositeFolderPaths.build, publicPath: micrositeUrlPaths.development, filename: '[name].bundle.js' },
   optimization: {
     concatenateModules: true,
   },
   plugins: [
-    getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.development }),
+    getDotenvWebpackStandardSetup({ path: environmentVariablesFilePaths.development }),
     getHotModuleReplacementPluginStandardSetup(),
   ],
   module: {

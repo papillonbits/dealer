@@ -1,5 +1,5 @@
 import { merge } from 'webpack-merge'
-import { environmentVariablesFilePath, micrositeFolderPath, micrositeUrlPath, banner } from './webpack.constant'
+import { environmentVariablesFilePaths, micrositeFolderPaths, micrositeUrlPaths, banner } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
@@ -15,8 +15,8 @@ export default merge(webpackCommonSetup, {
   mode: 'production',
   devtool: false,
   output: {
-    path: micrositeFolderPath.build,
-    publicPath: micrositeUrlPath.release,
+    path: micrositeFolderPaths.build,
+    publicPath: micrositeUrlPaths.release,
     filename: 'js/[name].[contenthash].bundle.js',
   },
   performance: {
@@ -31,7 +31,7 @@ export default merge(webpackCommonSetup, {
   },
   plugins: [
     getBannerPluginStandardSetup(banner),
-    getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.release }),
+    getDotenvWebpackStandardSetup({ path: environmentVariablesFilePaths.release }),
     getMiniCSSExtractPluginAdvancedSetup(),
     getWebpackBundleAnalyzerStandardSetup(),
   ],

@@ -1,5 +1,5 @@
 export const monorepo = {
-  papillonads: 'papillonads',
+  papillonbits: 'papillonbits',
   dealer: 'dealer',
   search: 'search',
   quoter: 'quoter',
