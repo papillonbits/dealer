@@ -41,8 +41,8 @@
     "release": "lerna publish"
   },
   "dependencies": {
-    "@papillonbits/components": "^0.30.0",
-    "@papillonbits/library": "^0.30.0",
+    "@papillonbits/components": "^0.32.0",
+    "@papillonbits/library": "^0.32.0",
     "@primer/primitives": "^7.9.0",
     "classnames": "^2.3.2",
     "prop-types": "^15.8.1",
