@@ -1,7 +1,5 @@
 import { async, regular } from './NotFoundPage.int.story'
 
-jest.mock('react-router-dom', () => ({ Link: () => <div>some link</div> }))
-
 describe('<NotFoundPage />', () => {
   afterEach(() => jest.clearAllMocks())
 

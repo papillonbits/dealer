@@ -23,9 +23,11 @@ exports[`<NotFoundPage /> Render must match regular 1`] = `
           width="16"
         />
         No match for route. Return to 
-        <div>
-          some link
-        </div>
+        <a
+          href="/list"
+        >
+          start page.
+        </a>
       </div>
     </div>
   </div>
