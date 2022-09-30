@@ -1,5 +1,5 @@
 import { merge } from 'webpack-merge'
-import { micrositeFolderPath } from './constant'
+import { micrositeFolderPath } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,

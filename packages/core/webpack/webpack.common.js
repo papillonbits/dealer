@@ -1,4 +1,4 @@
-import { micrositeFolderPath } from './constant'
+import { micrositeFolderPath } from './webpack.constant'
 
 import {
   getBabelLoaderAdvancedSetup,
