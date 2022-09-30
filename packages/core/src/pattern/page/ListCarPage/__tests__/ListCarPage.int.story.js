@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import { getAppMockStore } from '@papillonbits/library/store'
 import { withTests } from '@storybook/addon-jest'
 import { state } from '../../../../state'
@@ -22,9 +22,9 @@ export default {
 export function async() {
   return (
     <Provider store={getAppMockStore(appState)}>
-      <BrowserRouter>
+      <MemoryRouter>
         <AsyncListCarPage />
-      </BrowserRouter>
+      </MemoryRouter>
     </Provider>
   )
 }
@@ -32,9 +32,9 @@ export function async() {
 export function regular() {
   return (
     <Provider store={getAppMockStore(appState)}>
-      <BrowserRouter>
+      <MemoryRouter>
         <ListCarPage />
-      </BrowserRouter>
+      </MemoryRouter>
     </Provider>
   )
 }
