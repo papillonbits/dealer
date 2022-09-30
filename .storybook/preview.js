@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 
 export const parameters = {
@@ -14,9 +14,9 @@ export const parameters = {
   },
   decorators: [
     (Story) => (
-      <BrowserRouter>
+      <MemoryRouter>
         <Story />
-      </BrowserRouter>
+      </MemoryRouter>
     ),
   ],
   docs: { container: DocsContainer, page: DocsPage },
