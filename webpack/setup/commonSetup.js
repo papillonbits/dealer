@@ -8,13 +8,13 @@ import { getCopyWebpackPluginStandardSetup } from '../plugin/copyWebpackPlugin'
 import { getHtmlWebpackPluginStandardSetup } from '../plugin/htmlWebpackPlugin'
 import { getWebpackManifestPluginStandardSetup } from '../plugin/webpackManifestPlugin'
 
-export function getWebpackCommonSetup({ micrositeFolderPaths, resolvedModules, resolvedExtensions }) {
+export function getWebpackCommonSetup({ micrositeFolderPaths, packageJSON }) {
   return {
     entry: [`${micrositeFolderPaths.src}/index.js`],
     plugins: [
       getCleanWebpackPluginStandardSetup(),
       getCopyWebpackPluginStandardSetup({ from: micrositeFolderPaths.public, to: 'assets' }),
-      getHtmlWebpackPluginStandardSetup({ title: 'Dealer', micrositeWebpackFolderPath: micrositeFolderPaths.webpack }),
+      getHtmlWebpackPluginStandardSetup({ title: packageJSON.description, micrositeWebpackFolderPath: micrositeFolderPaths.webpack }),
       getWebpackManifestPluginStandardSetup(),
     ],
     module: {
@@ -28,8 +28,8 @@ export function getWebpackCommonSetup({ micrositeFolderPaths, resolvedModules, r
     },
 
     resolve: {
-      modules: resolvedModules,
-      extensions: resolvedExtensions,
+      modules: [micrositeFolderPaths.src, micrositeFolderPaths.nodeModules],
+      extensions: ['.js', '.jsx', '.json', '.scss'],
     },
   }
 }

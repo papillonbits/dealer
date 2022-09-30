@@ -6,9 +6,9 @@ import { getWebpackDevelopmentSetup } from '../../../webpack'
 export default merge(
   webpackCommonSetup,
   getWebpackDevelopmentSetup({
-    environmentVariablesFilePaths,
+    environmentVariablesFilePath: environmentVariablesFilePaths.development,
+    micrositeUrlPath: micrositeUrlPaths.development,
     micrositeFolderPaths,
-    micrositeUrlPaths,
     includedSourceFilePaths,
   }),
 )

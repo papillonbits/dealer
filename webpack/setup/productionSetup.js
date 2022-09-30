@@ -5,13 +5,13 @@ import { getDotenvWebpackStandardSetup } from '../plugin/dotenvWebpack'
 import { MiniCSSExtractPluginLoader, getMiniCSSExtractPluginAdvancedSetup } from '../plugin/miniCSSExtractPlugin'
 import { getWebpackBundleAnalyzerStandardSetup } from '../plugin/webpackBundleAnalyzer'
 
-export function getWebpackProductionSetup({ environmentVariablesFilePaths, micrositeFolderPaths, micrositeUrlPaths, banner }) {
+export function getWebpackProductionSetup({ environmentVariablesFilePath, micrositeUrlPath, micrositeFolderPaths, packageJSON }) {
   return {
     mode: 'production',
     devtool: false,
     output: {
       path: micrositeFolderPaths.build,
-      publicPath: micrositeUrlPaths.release,
+      publicPath: micrositeUrlPath,
       filename: 'js/[name].[contenthash].bundle.js',
     },
     performance: {
@@ -25,8 +25,8 @@ export function getWebpackProductionSetup({ environmentVariablesFilePaths, micro
       runtimeChunk: { name: 'runtime' },
     },
     plugins: [
-      getBannerPluginStandardSetup(banner),
-      getDotenvWebpackStandardSetup({ path: environmentVariablesFilePaths.release }),
+      getBannerPluginStandardSetup(packageJSON),
+      getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath }),
       getMiniCSSExtractPluginAdvancedSetup(),
       getWebpackBundleAnalyzerStandardSetup(),
     ],

@@ -7,8 +7,8 @@ import packageJSON from '../package.json'
 export default merge(
   webpackCommonSetup,
   getWebpackProductionSetup({
-    environmentVariablesFilePath: environmentVariablesFilePaths.release,
-    micrositeUrlPath: micrositeUrlPaths.release,
+    environmentVariablesFilePath: environmentVariablesFilePaths.test,
+    micrositeUrlPath: micrositeUrlPaths.test,
     micrositeFolderPaths,
     packageJSON,
   }),

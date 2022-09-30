@@ -2,6 +2,17 @@
 
 import webpack from 'webpack'
 
-export function getBannerPluginStandardSetup({ banner, raw, entryOnly, test, include, exclude, footer }) {
-  return new webpack.BannerPlugin({ banner, raw, entryOnly, test, include, exclude, footer })
+export function getBannerPluginStandardSetup(packageJSON) {
+  return new webpack.BannerPlugin({
+    banner: [
+      '/*!',
+      ` * @project        ${packageJSON.name}`,
+      ' * @name           [filebase]',
+      ` * @author         ${packageJSON.author.name}`,
+      ` * @copyright      Copyright (c) ${new Date().getFullYear()} ${packageJSON.author.name}`,
+      ' */',
+      '',
+    ].join('\n'),
+    raw: true,
+  })
 }

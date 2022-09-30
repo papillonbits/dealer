@@ -6,23 +6,20 @@ import { getHotModuleReplacementPluginStandardSetup } from '../plugin/hotModuleR
 import { getDevServerStandardSetup } from '../server/devServer'
 
 export function getWebpackDevelopmentSetup({
-  environmentVariablesFilePaths,
+  environmentVariablesFilePath,
+  micrositeUrlPath,
   micrositeFolderPaths,
-  micrositeUrlPaths,
   includedSourceFilePaths,
 }) {
   return {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: getDevServerStandardSetup(),
-    output: { path: micrositeFolderPaths.build, publicPath: micrositeUrlPaths.development, filename: '[name].bundle.js' },
+    output: { path: micrositeFolderPaths.build, publicPath: micrositeUrlPath, filename: '[name].bundle.js' },
     optimization: {
       concatenateModules: true,
     },
-    plugins: [
-      getDotenvWebpackStandardSetup({ path: environmentVariablesFilePaths.development }),
-      getHotModuleReplacementPluginStandardSetup(),
-    ],
+    plugins: [getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath }), getHotModuleReplacementPluginStandardSetup()],
     module: {
       rules: [
         {
