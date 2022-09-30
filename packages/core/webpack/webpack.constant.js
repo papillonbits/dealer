@@ -1,4 +1,5 @@
-const path = require('path')
+import path from 'path'
+import packageJSON from '../package.json'
 
 export const environmentVariablesFilePath = {
   development: path.resolve(__dirname, '../.env.develop'),
@@ -31,3 +32,16 @@ export const includedSourceFilePaths = [
 export const resolvedModules = [micrositeFolderPath.src, micrositeFolderPath.nodeModules]
 
 export const resolvedExtensions = ['.js', '.jsx', '.json', '.scss']
+
+export const banner = {
+  banner: [
+    '/*!',
+    ` * @project        ${packageJSON.name}`,
+    ' * @name           [filebase]',
+    ` * @author         ${packageJSON.author.name}`,
+    ` * @copyright      Copyright (c) ${new Date().getFullYear()} ${packageJSON.author.name}`,
+    ' */',
+    '',
+  ].join('\n'),
+  raw: true,
+}

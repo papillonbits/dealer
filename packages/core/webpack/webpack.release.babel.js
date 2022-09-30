@@ -1,8 +1,9 @@
 import { merge } from 'webpack-merge'
-import { environmentVariablesFilePath, micrositeFolderPath, micrositeUrlPath } from './webpack.constant'
+import { environmentVariablesFilePath, micrositeFolderPath, micrositeUrlPath, banner } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
+  getBannerPluginStandardSetup,
   getCSSMinimizerWebpackPluginStandardSetup,
   getDotenvWebpackStandardSetup,
   MiniCSSExtractPluginLoader,
@@ -27,7 +28,11 @@ export default merge(webpackCommonSetup, {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
-  plugins: [getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.release }), getMiniCSSExtractPluginAdvancedSetup()],
+  plugins: [
+    getBannerPluginStandardSetup(banner),
+    getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.release }),
+    getMiniCSSExtractPluginAdvancedSetup(),
+  ],
   module: {
     rules: [
       {
