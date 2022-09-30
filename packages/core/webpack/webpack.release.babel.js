@@ -1,4 +1,3 @@
-/* eslint-disable import/no-import-module-exports */
 import { merge } from 'webpack-merge'
 import { micrositeFolderPath } from './constant'
 import { webpackCommonSetup } from './webpack.common'
@@ -9,7 +8,7 @@ import {
   getMiniCSSExtractPluginAdvancedSetup,
 } from '../../../webpack'
 
-module.exports = merge(webpackCommonSetup, {
+export default merge(webpackCommonSetup, {
   mode: 'production',
   devtool: false,
   output: {

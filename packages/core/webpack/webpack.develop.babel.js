@@ -1,4 +1,3 @@
-/* eslint-disable import/no-import-module-exports */
 import { merge } from 'webpack-merge'
 import { includedSourceFilePaths, environmentVariablesFilePath } from './constant'
 import { webpackCommonSetup } from './webpack.common'
@@ -10,7 +9,7 @@ import {
   getHotModuleReplacementPluginStandardSetup,
 } from '../../../webpack'
 
-module.exports = merge(webpackCommonSetup, {
+export default merge(webpackCommonSetup, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
