@@ -3,5 +3,5 @@
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 export function getWebpackBundleAnalyzerStandardSetup() {
-  return new BundleAnalyzerPlugin()
+  return new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false })
 }

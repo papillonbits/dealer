@@ -8,6 +8,7 @@ import {
   getDotenvWebpackStandardSetup,
   MiniCSSExtractPluginLoader,
   getMiniCSSExtractPluginAdvancedSetup,
+  getWebpackBundleAnalyzerStandardSetup,
 } from '../../../webpack'
 
 export default merge(webpackCommonSetup, {
@@ -32,6 +33,7 @@ export default merge(webpackCommonSetup, {
     getBannerPluginStandardSetup(banner),
     getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.release }),
     getMiniCSSExtractPluginAdvancedSetup(),
+    getWebpackBundleAnalyzerStandardSetup(),
   ],
   module: {
     rules: [
