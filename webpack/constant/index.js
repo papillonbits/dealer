@@ -41,3 +41,5 @@ export const targetBrowsers = {
 export const manifestFileName = 'manifest.json'
 
 export const indexHTMLName = 'index.html'
+
+export const extensions = ['.js', '.jsx', '.json', '.scss']

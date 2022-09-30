@@ -7,6 +7,7 @@ import { getCleanWebpackPluginStandardSetup } from '../plugin/cleanWebpackPlugin
 import { getCopyWebpackPluginStandardSetup } from '../plugin/copyWebpackPlugin'
 import { getHtmlWebpackPluginStandardSetup } from '../plugin/htmlWebpackPlugin'
 import { getWebpackManifestPluginStandardSetup } from '../plugin/webpackManifestPlugin'
+import { extensions } from '../constant'
 
 export function getWebpackCommonSetup({ micrositeFolderPaths, packageJSON }) {
   return {
@@ -29,7 +30,7 @@ export function getWebpackCommonSetup({ micrositeFolderPaths, packageJSON }) {
 
     resolve: {
       modules: [micrositeFolderPaths.src, micrositeFolderPaths.nodeModules],
-      extensions: ['.js', '.jsx', '.json', '.scss'],
+      extensions,
     },
   }
 }
