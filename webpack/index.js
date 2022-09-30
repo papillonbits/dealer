@@ -23,3 +23,6 @@ export { getModuleConcatenationPluginStandardSetup } from './plugin/moduleConcat
 export { getWebpackBundleAnalyzerStandardSetup } from './plugin/webpackBundleAnalyzer'
 export { getWebpackManifestPluginStandardSetup } from './plugin/webpackManifestPlugin'
 export { getDevServerStandardSetup } from './server/devServer'
+export { getWebpackCommonSetup } from './setup/commonSetup'
+export { getWebpackDevelopmentSetup } from './setup/developmentSetup'
+export { getWebpackProductionSetup } from './setup/productionSetup'
