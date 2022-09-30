@@ -13,7 +13,6 @@ export const micrositeFolderPath = {
   nodeModules: path.resolve(__dirname, '../../../node_modules'),
   public: path.resolve(__dirname, '../public'),
   src: path.resolve(__dirname, '../src'),
-  urlPublicPath: '/dealer/',
 }
 
 export const includedSourceFilePaths = [

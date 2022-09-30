@@ -14,7 +14,6 @@ export default merge(webpackCommonSetup, {
   devtool: false,
   output: {
     path: micrositeFolderPath.build,
-    publicPath: micrositeFolderPath.urlPublicPath,
     filename: 'js/[name].[contenthash].bundle.js',
   },
   optimization: {
