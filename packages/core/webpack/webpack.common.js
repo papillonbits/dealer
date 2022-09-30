@@ -1,4 +1,4 @@
-import { micrositeFolderPath } from './webpack.constant'
+import { micrositeFolderPath, resolvedModules, resolvedExtensions } from './webpack.constant'
 
 import {
   getBabelLoaderAdvancedSetup,
@@ -33,7 +33,7 @@ export const webpackCommonSetup = {
   },
 
   resolve: {
-    modules: [micrositeFolderPath.src, micrositeFolderPath.nodeModules],
-    extensions: ['.js', '.jsx', '.json', '.scss'],
+    modules: resolvedModules,
+    extensions: resolvedExtensions,
   },
 }

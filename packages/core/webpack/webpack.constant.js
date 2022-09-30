@@ -14,6 +14,7 @@ export const micrositeFolderPath = {
   public: path.resolve(__dirname, '../public'),
   src: path.resolve(__dirname, '../src'),
 }
+
 export const micrositeUrlPath = {
   development: '/',
   test: '/dealer/',
@@ -26,3 +27,7 @@ export const includedSourceFilePaths = [
   `${micrositeFolderPath.nodeModules}/@papillonbits/components/build`,
   `${micrositeFolderPath.nodeModules}/@papillonbits/css/build`,
 ]
+
+export const resolvedModules = [micrositeFolderPath.src, micrositeFolderPath.nodeModules]
+
+export const resolvedExtensions = ['.js', '.jsx', '.json', '.scss']
