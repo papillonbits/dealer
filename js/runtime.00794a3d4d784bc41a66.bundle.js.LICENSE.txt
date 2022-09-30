@@ -1,6 +1,6 @@
 /*!
  * @project        @papillonbits/dealer-core-microsite
- * @name           runtime.d8959eb4e46cc4edaf0d.bundle.js
+ * @name           runtime.00794a3d4d784bc41a66.bundle.js
  * @author         MTS
  * @copyright      Copyright (c) 2022 MTS
  */

@@ -6,21 +6,9 @@
 
 /*!
  * @project        @papillonbits/dealer-core-microsite
- * @name           main.d09fba62849b4e711138.bundle.js
+ * @name           main.ccbed27131b514e4b17c.bundle.js
  * @author         MTS
  * @copyright      Copyright (c) 2022 MTS
- */
-
-/*! axe v4.4.3
- * Copyright (c) 2022 Deque Systems, Inc.
- *
- * Your use of this Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
- * This entire copyright notice must appear in every copy of this file you
- * distribute or in any file that contains substantial portions of this source
- * code.
  */
 
 /**
