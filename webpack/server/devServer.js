@@ -7,5 +7,8 @@ export function getDevServerStandardSetup() {
     compress: true,
     hot: true,
     port: 8080,
+    host: 'localhost',
+    https: false,
+    headers: { 'Access-Control-Allow-Origin': '*' },
   }
 }
