@@ -17,6 +17,17 @@ module.exports = merge(webpackCommonSetup, {
     publicPath: '/',
     filename: 'js/[name].[contenthash].bundle.js',
   },
+  optimization: {
+    minimize: true,
+    minimizer: [getCSSMinimizerWebpackPluginStandardSetup(), '...'],
+    runtimeChunk: { name: 'runtime' },
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
+  plugins: [getMiniCSSExtractPluginAdvancedSetup()],
   module: {
     rules: [
       {
@@ -29,16 +40,5 @@ module.exports = merge(webpackCommonSetup, {
         ],
       },
     ],
-  },
-  plugins: [getMiniCSSExtractPluginAdvancedSetup()],
-  optimization: {
-    minimize: true,
-    minimizer: [getCSSMinimizerWebpackPluginStandardSetup(), '...'],
-    runtimeChunk: { name: 'runtime' },
-  },
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
   },
 })
