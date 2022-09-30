@@ -19,6 +19,7 @@ export {
   getMiniCSSExtractPluginStandardSetup,
   getMiniCSSExtractPluginAdvancedSetup,
 } from './plugin/miniCSSExtractPlugin'
+export { getModuleConcatenationPluginStandardSetup } from './plugin/moduleConcatenationPlugin'
 export { getWebpackBundleAnalyzerStandardSetup } from './plugin/webpackBundleAnalyzer'
 export { getWebpackManifestPluginStandardSetup } from './plugin/webpackManifestPlugin'
 export { getDevServerStandardSetup } from './server/devServer'

@@ -13,8 +13,11 @@ import {
 export default merge(webpackCommonSetup, {
   mode: 'development',
   devtool: 'inline-source-map',
-  output: { path: micrositeFolderPath.build, publicPath: micrositeUrlPath.development, filename: '[name].bundle.js' },
   devServer: getDevServerStandardSetup(),
+  output: { path: micrositeFolderPath.build, publicPath: micrositeUrlPath.development, filename: '[name].bundle.js' },
+  optimization: {
+    concatenateModules: true,
+  },
   plugins: [
     getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.development }),
     getHotModuleReplacementPluginStandardSetup(),

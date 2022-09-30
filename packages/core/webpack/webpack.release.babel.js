@@ -19,15 +19,15 @@ export default merge(webpackCommonSetup, {
     publicPath: micrositeUrlPath.release,
     filename: 'js/[name].[contenthash].bundle.js',
   },
-  optimization: {
-    minimize: true,
-    minimizer: [getCSSMinimizerWebpackPluginStandardSetup(), '...'],
-    runtimeChunk: { name: 'runtime' },
-  },
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [getCSSMinimizerWebpackPluginStandardSetup(), '...'],
+    runtimeChunk: { name: 'runtime' },
   },
   plugins: [
     getBannerPluginStandardSetup(banner),
