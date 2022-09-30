@@ -20,3 +20,4 @@ export {
 } from './plugin/miniCSSExtractPlugin'
 export { getWebpackBundleAnalyzerStandardSetup } from './plugin/webpackBundleAnalyzer'
 export { getWebpackManifestPluginStandardSetup } from './plugin/webpackManifestPlugin'
+export { getDevServerStandardSetup } from './server/devServer'

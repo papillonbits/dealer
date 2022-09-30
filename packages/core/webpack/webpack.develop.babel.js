@@ -7,19 +7,14 @@ import {
   getSassLoaderStandardSetup,
   getDotenvWebpackStandardSetup,
   getHotModuleReplacementPluginStandardSetup,
+  getDevServerStandardSetup,
 } from '../../../webpack'
 
 export default merge(webpackCommonSetup, {
   mode: 'development',
   devtool: 'inline-source-map',
-  devServer: {
-    historyApiFallback: true,
-    open: true,
-    compress: true,
-    hot: true,
-    port: 8080,
-  },
   output: { path: micrositeFolderPath.build, publicPath: micrositeUrlPath.development, filename: '[name].bundle.js' },
+  devServer: getDevServerStandardSetup(),
   plugins: [
     getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.development }),
     getHotModuleReplacementPluginStandardSetup(),
