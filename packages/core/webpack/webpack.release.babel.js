@@ -1,9 +1,10 @@
 import { merge } from 'webpack-merge'
-import { micrositeFolderPath } from './webpack.constant'
+import { environmentVariablesFilePath, micrositeFolderPath } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
   getCSSMinimizerWebpackPluginStandardSetup,
+  getDotenvWebpackStandardSetup,
   MiniCSSExtractPluginLoader,
   getMiniCSSExtractPluginAdvancedSetup,
 } from '../../../webpack'
@@ -13,7 +14,7 @@ export default merge(webpackCommonSetup, {
   devtool: false,
   output: {
     path: micrositeFolderPath.build,
-    publicPath: '/',
+    publicPath: micrositeFolderPath.urlPublicPath,
     filename: 'js/[name].[contenthash].bundle.js',
   },
   optimization: {
@@ -26,7 +27,7 @@ export default merge(webpackCommonSetup, {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
-  plugins: [getMiniCSSExtractPluginAdvancedSetup()],
+  plugins: [getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.release }), getMiniCSSExtractPluginAdvancedSetup()],
   module: {
     rules: [
       {

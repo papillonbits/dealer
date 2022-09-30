@@ -1,5 +1,5 @@
 import { merge } from 'webpack-merge'
-import { includedSourceFilePaths, environmentVariablesFilePath } from './webpack.constant'
+import { environmentVariablesFilePath, includedSourceFilePaths } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
