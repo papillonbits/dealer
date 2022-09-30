@@ -41,5 +41,4 @@ module.exports = {
       lines: 85,
     },
   },
-  preset: process.env.NODE_ENV === 'test' ? null : 'jest-puppeteer',
 }

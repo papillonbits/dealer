@@ -26,7 +26,6 @@
     "document": false,
     "expect": false,
     "jest": false,
-    "jestPuppeteer": true,
     "jsdom": true,
     "page": true,
     "renderMount": false,

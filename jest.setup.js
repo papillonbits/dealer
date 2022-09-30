@@ -2,12 +2,10 @@ import 'jsdom-global/register'
 
 import { render } from '@testing-library/react'
 
-import 'expect-puppeteer'
+import { configureAxe, toHaveNoViolations } from 'jest-axe'
 
 global.renderToJSON = (component) => render(component).container
 
-require('whatwg-fetch')
+global.axe = configureAxe({ rules: { region: { enabled: false } } })
 
-require('expect-puppeteer')
-
-jest.setTimeout(120e3)
+expect.extend(toHaveNoViolations)
