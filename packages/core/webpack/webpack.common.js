@@ -20,7 +20,7 @@ export const webpackCommonSetup = {
     getCleanWebpackPluginStandardSetup(),
     getCopyWebpackPluginStandardSetup({ from: micrositeFolderPath.public, to: 'assets' }),
     getDotenvWebpackStandardSetup({ path: './.env.develop' }),
-    getHtmlWebpackPluginStandardSetup({ title: 'Dealer', micrositeCompileFolderPath: micrositeFolderPath.compile }),
+    getHtmlWebpackPluginStandardSetup({ title: 'Dealer', micrositeWebpackFolderPath: micrositeFolderPath.webpack }),
     getWebpackManifestPluginStandardSetup(),
   ],
   module: {

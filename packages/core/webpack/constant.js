@@ -9,7 +9,7 @@ export const environmentVariablesFilePath = {
 
 export const micrositeFolderPath = {
   build: path.resolve(__dirname, '../build'),
-  compile: path.resolve(__dirname, '../compile'),
+  webpack: path.resolve(__dirname, '../webpack'),
   nodeModules: path.resolve(__dirname, '../../../node_modules'),
   public: path.resolve(__dirname, '../public'),
   src: path.resolve(__dirname, '../src'),
