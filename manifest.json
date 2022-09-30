@@ -1,6 +1,6 @@
 {
-  "main.css": "/dealer/styles/main.ae3a466ceab7be4e13a9.css",
-  "main.js": "/dealer/js/main.d09fba62849b4e711138.bundle.js",
-  "runtime.js": "/dealer/js/runtime.9c17807af5a9087920c7.bundle.js",
-  "index.html": "/dealer/index.html"
+  "main.css": "/styles/main.ae3a466ceab7be4e13a9.css",
+  "main.js": "/js/main.d09fba62849b4e711138.bundle.js",
+  "runtime.js": "/js/runtime.9c17807af5a9087920c7.bundle.js",
+  "index.html": "/index.html"
 }
