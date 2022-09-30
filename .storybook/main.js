@@ -2,13 +2,20 @@ const path = require('path')
 const modulesPath = path.resolve(__dirname, '../packages')
 const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin')
 
+function isEmpty(obj) {
+  for (var prop in obj) {
+    if (obj.hasOwnProperty(prop)) return false
+  }
+
+  return true
+}
+
 module.exports = {
   stories: ['../packages/core/src/**/**/**/__tests__/*.int.story.@(js|mdx)'],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-actions',
     '@storybook/addon-backgrounds',
-    '@storybook/addon-controls',
     {
       name: '@storybook/addon-docs',
       options: {
@@ -19,6 +26,7 @@ module.exports = {
         },
       },
     },
+    '@storybook/addon-controls',
     '@storybook/addon-jest',
     {
       name: '@storybook/addon-storysource',
@@ -39,7 +47,21 @@ module.exports = {
       },
     },
     '@storybook/addon-viewport',
+    // fails with @storybook/addon-postcss v3.0.0-alpha.1
+    // '@storybook/addon-postcss',
+    // {
+    //   name: '@storybook/addon-postcss',
+    //   options: {
+    //     postcssLoaderOptions: {
+    //       implementation: require('postcss'),
+    //     },
+    //   },
+    // },
   ],
+  framework: '@storybook/react',
+  core: {
+    builder: 'webpack5',
+  },
   webpackFinal: async (config, { configType }) => {
     // to be activated when storybook catches up with react/babel new jsx transform
     // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
@@ -55,17 +77,17 @@ module.exports = {
     //     : preset
     // })
 
-    const fileLoaderRuleSVG = config.module.rules.find((rule) => rule.test.test && rule.test.test('.svg'))
+    const fileLoaderRuleSVG = config.module.rules.find((rule) => !isEmpty(rule) && rule.test.test && rule.test.test('.svg'))
     fileLoaderRuleSVG.exclude = /\.svg$/
 
-    const fileLoaderRuleJSX = config.module.rules.find((rule) => rule.test.test && rule.test.test('.jsx'))
-    fileLoaderRuleJSX.use[0].options.plugins.push(
-      path.resolve(__dirname, '../node_modules/@babel/plugin-transform-modules-commonjs/lib/index.js'),
-    )
+    // const fileLoaderRuleJSX = config.module.rules.find((rule) => !isEmpty(rule) && rule.test.test && rule.test.test('.jsx'))
+    // fileLoaderRuleJSX.use[0].options.plugins.push(
+    //   path.resolve(__dirname, '../node_modules/@babel/plugin-transform-modules-commonjs/lib/index.js'),
+    // )
 
-    fileLoaderRuleJSX.use[0].options.plugins.push(
-      path.resolve(__dirname, '../node_modules/babel-plugin-syntax-async-functions/lib/index.js'),
-    )
+    // fileLoaderRuleJSX.use[0].options.plugins.push(
+    //   path.resolve(__dirname, '../node_modules/babel-plugin-syntax-async-functions/lib/index.js'),
+    // )
 
     config.module.rules = config.module.rules.concat([
       {
