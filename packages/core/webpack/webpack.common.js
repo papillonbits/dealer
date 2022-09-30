@@ -15,7 +15,6 @@ import {
 
 export const webpackCommonSetup = {
   entry: [`${micrositeFolderPath.src}/index.js`],
-  output: { path: micrositeFolderPath.build, filename: '[name].bundle.js', publicPath: '/' },
   plugins: [
     getCleanWebpackPluginStandardSetup(),
     getCopyWebpackPluginStandardSetup({ from: micrositeFolderPath.public, to: 'assets' }),

@@ -1,5 +1,5 @@
 import { merge } from 'webpack-merge'
-import { environmentVariablesFilePath, includedSourceFilePaths } from './webpack.constant'
+import { environmentVariablesFilePath, micrositeFolderPath, micrositeUrlPath, includedSourceFilePaths } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
@@ -19,6 +19,7 @@ export default merge(webpackCommonSetup, {
     hot: true,
     port: 8080,
   },
+  output: { path: micrositeFolderPath.build, publicPath: micrositeUrlPath.development, filename: '[name].bundle.js' },
   plugins: [
     getDotenvWebpackStandardSetup({ path: environmentVariablesFilePath.development }),
     getHotModuleReplacementPluginStandardSetup(),

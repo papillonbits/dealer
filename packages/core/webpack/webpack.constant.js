@@ -14,6 +14,12 @@ export const micrositeFolderPath = {
   public: path.resolve(__dirname, '../public'),
   src: path.resolve(__dirname, '../src'),
 }
+export const micrositeUrlPath = {
+  development: '/',
+  test: '/dealer/',
+  acceptance: '/dealer/',
+  release: '/dealer/',
+}
 
 export const includedSourceFilePaths = [
   micrositeFolderPath.src,

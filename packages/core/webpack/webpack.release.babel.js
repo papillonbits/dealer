@@ -1,5 +1,5 @@
 import { merge } from 'webpack-merge'
-import { environmentVariablesFilePath, micrositeFolderPath } from './webpack.constant'
+import { environmentVariablesFilePath, micrositeFolderPath, micrositeUrlPath } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import {
   getCSSLoaderStandardSetup,
@@ -14,6 +14,7 @@ export default merge(webpackCommonSetup, {
   devtool: false,
   output: {
     path: micrositeFolderPath.build,
+    publicPath: micrositeUrlPath.release,
     filename: 'js/[name].[contenthash].bundle.js',
   },
   optimization: {
