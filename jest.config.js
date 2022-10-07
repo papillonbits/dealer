@@ -1,6 +1,6 @@
 module.exports = {
   testMatch: ['**/?(*.)test.js?(x)'],
-  testPathIgnorePatterns: process.env.NODE_ENV === 'test' ? ['packages/core/webpack.test.js'] : ['packages/core'],
+  testPathIgnorePatterns: process.env.NODE_ENV === 'test' ? ['packages/core/webpack/webpack.test.babel.js'] : ['packages/core'],
   roots: ['<rootDir>'],
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
