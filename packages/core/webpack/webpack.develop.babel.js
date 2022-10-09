@@ -1,14 +1,11 @@
 import { getWebpackDevelopmentSetup } from '@papillonbits/library/webpack'
-import { merge } from 'webpack-merge'
 import { environmentVariablesFilePaths, micrositeFolderPaths, micrositeUrlPaths, includedSourceFilePaths } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 
-export default merge(
+export default getWebpackDevelopmentSetup({
   webpackCommonSetup,
-  getWebpackDevelopmentSetup({
-    environmentVariablesFilePath: environmentVariablesFilePaths.development,
-    micrositeUrlPath: micrositeUrlPaths.development,
-    micrositeFolderPaths,
-    includedSourceFilePaths,
-  }),
-)
+  environmentVariablesFilePath: environmentVariablesFilePaths.development,
+  micrositeUrlPath: micrositeUrlPaths.development,
+  micrositeFolderPaths,
+  includedSourceFilePaths,
+})

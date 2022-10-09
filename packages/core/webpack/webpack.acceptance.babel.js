@@ -1,15 +1,12 @@
 import { getWebpackProductionSetup } from '@papillonbits/library/webpack'
-import { merge } from 'webpack-merge'
 import { environmentVariablesFilePaths, micrositeFolderPaths, micrositeUrlPaths } from './webpack.constant'
 import { webpackCommonSetup } from './webpack.common'
 import packageJSON from '../package.json'
 
-export default merge(
+export default getWebpackProductionSetup({
   webpackCommonSetup,
-  getWebpackProductionSetup({
-    environmentVariablesFilePath: environmentVariablesFilePaths.acceptance,
-    micrositeUrlPath: micrositeUrlPaths.acceptance,
-    micrositeFolderPaths,
-    packageJSON,
-  }),
-)
+  environmentVariablesFilePath: environmentVariablesFilePaths.acceptance,
+  micrositeUrlPath: micrositeUrlPaths.acceptance,
+  micrositeFolderPaths,
+  packageJSON,
+})
