@@ -1,5 +1,3 @@
-/* eslint-disable global-require */
-
 require('@babel/register')({
   extensions: ['.js', '.jsx'],
   ignore: [],
