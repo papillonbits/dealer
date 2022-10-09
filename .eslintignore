@@ -11,10 +11,9 @@ app.sublime-workspace
 # CI/CD
 .travis.yml
 
-# Test
-.coverage
-
 # Dealer
+.coverage
+.husky
 node_modules
 .env
 .npmrc

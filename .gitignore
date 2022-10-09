@@ -8,10 +8,8 @@ app.sublime-workspace
 # Storybook
 .storybook-static
 
-# Test
-.coverage
-
 # Dealer
+.coverage
 node_modules
 .env
 .npmrc
