@@ -8,9 +8,6 @@ app.sublime-workspace
 # Storybook
 .storybook-static
 
-# CI/CD
-.travis.yml
-
 # Dealer
 .coverage
 .husky
