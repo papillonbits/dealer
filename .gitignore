@@ -8,16 +8,16 @@ app.sublime-workspace
 # Storybook
 .storybook-static
 
-# CI/CD
-.travis.yml
-
 # Test
-coverage
+.coverage
 
 # Dealer
-npm-debug.log
-lerna-debug.log
 node_modules
+.env
+.npmrc
+codecov
+lerna-debug.log
+npm-debug.log
 
 # Microsite Core
 packages/core/build
