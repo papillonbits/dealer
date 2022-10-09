@@ -11,7 +11,7 @@
     "url": "https://github.com/papillonbits/dealer.git"
   },
   "scripts": {
-    "clean-up": "rm -rf node_modules package-lock.json .storybook-static coverage && npm i lerna -S && lerna run clean-up --stream",
+    "clean-up": "rm -rf node_modules package-lock.json .storybook-static .coverage && npm i lerna -S && lerna run clean-up --stream",
     "install-packages": "npm install && lerna run install-packages --stream",
     "install-papillonbits-latest": "npm i \"@papillonbits/components\"@latest && npm i \"@papillonbits/library\"@latest && lerna run install-papillonbits-latest --stream",
     "bootstrap-test": "npm-run-all build-test build-storybook lint:format test report-coverage",
@@ -34,15 +34,15 @@
     "test": "jest -u --silent --runInBand --coverage",
     "test:tdd": "jest --watch --onlyChanged --silent=false --verbose",
     "test:generate-output": "jest --coverage=false --json --outputFile=.jest-test-results.json || true",
-    "report-coverage": "codecov",
+    "report-coverage": "dotenv ./codecov -t %CODECOV_TOKEN%",
     "start-storybook": "NODE_ENV=develop start-storybook -p 7007 -c .storybook",
     "deploy-core": "gh-pages -d packages/core/build",
     "deploy": "npm-run-all deploy-core",
     "release": "lerna publish"
   },
   "dependencies": {
-    "@papillonbits/components": "^0.45.0",
-    "@papillonbits/library": "^0.45.0",
+    "@papillonbits/components": "^0.46.0",
+    "@papillonbits/library": "^0.46.0",
     "@primer/primitives": "^7.9.0",
     "classnames": "^2.3.2",
     "prop-types": "^15.8.1",
@@ -106,6 +106,7 @@
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.1",
     "dotenv": "^16.0.3",
+    "dotenv-cli": "^6.0.0",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.25.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -153,7 +154,6 @@
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
-    "webpack-manifest-plugin": "^5.0.0",
-    "webpack-merge": "^5.8.0"
+    "webpack-manifest-plugin": "^5.0.0"
   }
 }

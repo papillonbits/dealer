@@ -1,7 +1,9 @@
+// https://docs.codecov.com/docs/codecov-uploader
 /* eslint-disable prefer-destructuring */
 const getJestSetup = require('@papillonbits/library/jest').getJestSetup
 
 const testPathIgnorePatterns = process.env.NODE_ENV === 'test' ? ['packages/core/webpack/webpack.test.babel.js'] : ['packages/core']
+const coverageDirectory = './.coverage/'
 const collectCoverage = process.env.NODE_ENV === 'test'
 const collectCoverageFrom = [
   '!**/coverage/**',
@@ -30,4 +32,4 @@ const coverageThreshold = {
   },
 }
 
-module.exports = getJestSetup({ testPathIgnorePatterns, collectCoverage, collectCoverageFrom, coverageThreshold })
+module.exports = getJestSetup({ testPathIgnorePatterns, coverageDirectory, collectCoverage, collectCoverageFrom, coverageThreshold })
