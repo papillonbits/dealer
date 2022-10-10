@@ -40,6 +40,14 @@
 
 > Flux based application architecture is applied using `redux`, `react-redux`, `redux-thunk` and `redux-logger`.
 
+> Actions and thunks are dispatched to mutate application state in store.
+
+<img src=".docs/image/flux-flow.png" alt="flux flow" />
+
+> Components consume application state from store.
+
+<img src=".docs/image/flux-component.png" alt="flux component" />
+
 ## 📗 Bootstrap
 
 > Bootstrap is achieved using the following commands once having cloned this project:
