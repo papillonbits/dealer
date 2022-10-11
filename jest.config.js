@@ -20,8 +20,6 @@ const collectCoverageFrom = [
   '!packages/core/src/state/**',
   '!packages/core/src/store/reducer/**',
   '!packages/core/src/store/thunk/**',
-  '!packages/docs/**',
-  '!packages/e2e/**',
 ]
 const coverageThreshold = {
   global: {

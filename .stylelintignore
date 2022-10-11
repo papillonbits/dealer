@@ -23,9 +23,3 @@ package-lock.json
 packages/core/package-lock.json
 packages/core/build
 packages/core/node_modules
-
-# Microsite Docs
-packages/docs/src/asset/*
-packages/docs/package-lock.json
-packages/docs/build
-packages/docs/node_modules

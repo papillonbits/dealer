@@ -22,7 +22,7 @@
   "scripts": {
     "clean-up": "rm -rf build node_modules package-lock.json",
     "install-packages": "npm install",
-    "install-papillonbits-latest": "echo \"docs skipping install-papillonbits-latest\" && exit 0",
+    "install-papillonbits-latest": "echo \"core skipping install-papillonbits-latest\" && exit 0",
     "make-404-page": "cp build/index.html build/404.html",
     "build-test": "webpack --config webpack/webpack.test.babel.js --progress && npm run make-404-page",
     "build-acceptance": "webpack --config webpack/webpack.acceptance.babel.js --progress && npm run make-404-page",

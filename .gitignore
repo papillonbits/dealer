@@ -24,7 +24,3 @@ packages/core/.env.develop
 packages/core/.env.test
 packages/core/.env.acceptance
 packages/core/.env.release
-
-# Microsite Docs
-packages/docs/build
-packages/docs/node_modules
