@@ -5,8 +5,8 @@
 */
 
 /*!
- * @project        @papillonbits/dealer-core-microsite
- * @name           main.ccbed27131b514e4b17c.bundle.js
+ * @project        dealer
+ * @name           main.b17ebc69c909389709e9.bundle.js
  * @author         MTS
  * @copyright      Copyright (c) 2022 MTS
  */
@@ -72,7 +72,7 @@
  */
 
 /**
- * @remix-run/router v1.0.1
+ * @remix-run/router v1.0.2
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -83,7 +83,7 @@
  */
 
 /**
- * React Router DOM v6.4.1
+ * React Router DOM v6.4.2
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -94,7 +94,7 @@
  */
 
 /**
- * React Router v6.4.1
+ * React Router v6.4.2
  *
  * Copyright (c) Remix Software Inc.
  *
