@@ -2,8 +2,8 @@
   "name": "dealer",
   "description": "Dealer",
   "engines": {
-    "node": "20.1.0",
-    "npm": "9.6.4"
+    "node": "20.2.0",
+    "npm": "9.6.6"
   },
   "homepage": "https://github.com/papillonbits/dealer#readme",
   "repository": {
@@ -45,9 +45,9 @@
     "release": "lerna publish"
   },
   "dependencies": {
-    "@papillonbits/components": "^0.75.0",
-    "@papillonbits/library": "^0.75.0",
-    "@papillonbits/setup": "^0.75.0",
+    "@papillonbits/components": "^0.76.0",
+    "@papillonbits/library": "^0.76.0",
+    "@papillonbits/setup": "^0.76.0",
     "@primer/primitives": "^7.11.10",
     "classnames": "^2.3.2",
     "prop-types": "^15.8.1",
@@ -64,7 +64,7 @@
     "whatwg-fetch": "^3.6.2"
   },
   "devDependencies": {
-    "@axe-core/react": "^4.7.0",
+    "@axe-core/react": "^4.7.1",
     "@babel/core": "^7.21.8",
     "@babel/eslint-parser": "^7.21.8",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
