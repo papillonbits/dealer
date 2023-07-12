@@ -6,7 +6,7 @@
 
 /*!
  * @project        dealer
- * @name           main.298603d3ff446478370b.bundle.js
+ * @name           main.8f6b3ecf6fee2e3cdee3.bundle.js
  * @author         MTS
  * @copyright      Copyright (c) 2023 MTS
  */
