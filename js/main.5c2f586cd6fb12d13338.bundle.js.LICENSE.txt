@@ -6,7 +6,7 @@
 
 /*!
  * @project        dealer
- * @name           main.8f6b3ecf6fee2e3cdee3.bundle.js
+ * @name           main.5c2f586cd6fb12d13338.bundle.js
  * @author         MTS
  * @copyright      Copyright (c) 2023 MTS
  */
@@ -82,7 +82,7 @@
  */
 
 /**
- * @remix-run/router v1.7.1
+ * @remix-run/router v1.7.2
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -93,7 +93,7 @@
  */
 
 /**
- * React Router DOM v6.14.1
+ * React Router DOM v6.14.2
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -104,7 +104,7 @@
  */
 
 /**
- * React Router v6.14.1
+ * React Router v6.14.2
  *
  * Copyright (c) Remix Software Inc.
  *
