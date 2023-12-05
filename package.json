@@ -2,8 +2,8 @@
   "name": "dealer",
   "description": "Dealer",
   "engines": {
-    "node": "21.2.0",
-    "npm": "10.2.3"
+    "node": "21.4.0",
+    "npm": "10.2.4"
   },
   "homepage": "https://github.com/papillonbits/dealer#readme",
   "repository": {
@@ -45,15 +45,15 @@
     "release": "lerna publish"
   },
   "dependencies": {
-    "@papillonbits/components": "^0.95.0",
-    "@papillonbits/library": "^0.95.0",
-    "@papillonbits/setup": "^0.95.0",
+    "@papillonbits/components": "^0.96.0",
+    "@papillonbits/library": "^0.96.0",
+    "@papillonbits/setup": "^0.96.0",
     "@primer/primitives": "^7.15.4",
     "classnames": "^2.3.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^9.0.0",
+    "react-redux": "^9.0.1",
     "react-router": "^6.20.1",
     "react-router-dom": "^6.20.1",
     "redux": "^5.0.0",
