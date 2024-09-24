@@ -5,13 +5,12 @@
 @mixin navigator {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
 
   @include breakpoint(lg) {
     flex-direction: row;
   }
-
-  justify-content: space-between;
-  padding-top: 10px;
 
   &Heading {
     min-width: 250px;
