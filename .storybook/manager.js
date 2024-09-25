@@ -1,13 +1,12 @@
-import { addons } from '@storybook/manager-api'
-import { create } from '@storybook/theming'
 import { version } from '../lerna.json'
+import { setStorybookManagerSetup } from '@papillonbits/setup/storybook/managerSetup'
 
-addons.setConfig({
+setStorybookManagerSetup({
   panelPosition: 'right',
-  theme: create({
+  theme: {
     base: 'light',
     brandTitle: `Dealer v${version}`,
     brandUrl: 'https://github.com/papillonbits/dealer',
     brandImage: 'https://avatars2.githubusercontent.com/u/81188645',
-  }),
+  },
 })
