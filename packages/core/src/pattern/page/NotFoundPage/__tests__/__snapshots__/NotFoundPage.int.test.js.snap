@@ -24,6 +24,7 @@ exports[`<NotFoundPage /> Render must match regular 1`] = `
         />
         No match for route. Return to 
         <a
+          data-discover="true"
           href="/list"
         >
           start page.

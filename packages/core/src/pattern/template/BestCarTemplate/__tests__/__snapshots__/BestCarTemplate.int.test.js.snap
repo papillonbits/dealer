@@ -49,12 +49,14 @@ exports[`<BestCarTemplate /> Render must match regular() 1`] = `
           <a
             aria-current="page"
             class="tabnav-tab"
+            data-discover="true"
             href="/list"
           >
             List Cars
           </a>
           <a
             class="tabnav-tab"
+            data-discover="true"
             href="/best"
           >
             Best Cars
