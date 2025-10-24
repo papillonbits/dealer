@@ -18,7 +18,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
         >
           <mock-file
             aria-hidden="true"
-            classname="mr-2"
+            class="mr-2"
             height="16"
             role="img"
             style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
@@ -5036,7 +5036,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
             >
               <mock-file
                 aria-hidden="true"
-                classname="mr-2"
+                class="mr-2"
                 height="16"
                 role="img"
                 style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
@@ -5051,7 +5051,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
             >
               <mock-file
                 aria-hidden="true"
-                classname="mr-2"
+                class="mr-2"
                 height="16"
                 role="img"
                 style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
@@ -5081,7 +5081,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
         >
           <mock-file
             aria-hidden="true"
-            classname="mr-2"
+            class="mr-2"
             height="16"
             role="img"
             style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"

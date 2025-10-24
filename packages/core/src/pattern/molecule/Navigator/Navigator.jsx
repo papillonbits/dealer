@@ -3,7 +3,7 @@ import { defaultProps, propTypes } from './Navigator.prop'
 import { useNavigatorState } from './Navigator.hook'
 import styles from './Navigator.scss'
 
-export function Navigator({ headingLeft, headingRight }) {
+export function Navigator({ headingLeft = defaultProps.headingLeft, headingRight = defaultProps.headingRight }) {
   const {
     Navigation: { TabNav, tabNavState },
     Subhead,
@@ -26,7 +26,5 @@ export function Navigator({ headingLeft, headingRight }) {
     </div>
   )
 }
-
-Navigator.defaultProps = defaultProps
 
 Navigator.propTypes = propTypes

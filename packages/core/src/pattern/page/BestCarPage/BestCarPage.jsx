@@ -1,11 +1,9 @@
 import { BestCarTemplate } from '../../template/BestCarTemplate'
-import { defaultProps, propTypes } from './BestCarPage.prop'
+import { propTypes } from './BestCarPage.prop'
 
 export function BestCarPage() {
   return <BestCarTemplate />
 }
-
-BestCarPage.defaultProps = defaultProps
 
 BestCarPage.propTypes = propTypes
 

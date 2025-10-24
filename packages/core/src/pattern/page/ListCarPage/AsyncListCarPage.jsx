@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { defaultProps, propTypes } from './ListCarPage.prop'
+import { propTypes } from './ListCarPage.prop'
 
 const LazyListCarPage = lazy(() => import('./ListCarPage'))
 
@@ -10,7 +10,5 @@ export function AsyncListCarPage() {
     </Suspense>
   )
 }
-
-AsyncListCarPage.defaultProps = defaultProps
 
 AsyncListCarPage.propTypes = propTypes

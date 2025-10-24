@@ -1,11 +1,9 @@
 import { ListCarTemplate } from '../../template/ListCarTemplate'
-import { defaultProps, propTypes } from './ListCarPage.prop'
+import { propTypes } from './ListCarPage.prop'
 
 export function ListCarPage() {
   return <ListCarTemplate />
 }
-
-ListCarPage.defaultProps = defaultProps
 
 ListCarPage.propTypes = propTypes
 

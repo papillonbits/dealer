@@ -1,6 +1,6 @@
 import { primer } from '@papillonbits/components'
 import { Navigator } from '../../molecule/Navigator'
-import { defaultProps, propTypes } from './BestCarTemplate.prop'
+import { propTypes } from './BestCarTemplate.prop'
 import { useBestCarState } from './BestCarTemplate.hook'
 import styles from './BestCarTemplate.scss'
 
@@ -163,7 +163,5 @@ export function BestCarTemplate() {
     </div>
   )
 }
-
-BestCarTemplate.defaultProps = defaultProps
 
 BestCarTemplate.propTypes = propTypes

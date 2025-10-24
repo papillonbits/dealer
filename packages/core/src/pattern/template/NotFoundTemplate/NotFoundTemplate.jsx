@@ -1,7 +1,7 @@
 import { primer } from '@papillonbits/components'
 import { Link } from 'react-router-dom'
 import { startPagePath } from '../../../route/path'
-import { defaultProps, propTypes } from './NotFoundTemplate.prop'
+import { propTypes } from './NotFoundTemplate.prop'
 import styles from './NotFoundTemplate.scss'
 
 const {
@@ -18,7 +18,5 @@ export function NotFoundTemplate() {
     </Alert>
   )
 }
-
-NotFoundTemplate.defaultProps = defaultProps
 
 NotFoundTemplate.propTypes = propTypes
