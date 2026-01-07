@@ -1,9 +1,9 @@
 import { primer } from '@papillonbits/components'
-import { defaultProps, propTypes } from './Navigator.prop'
+import { propTypes } from './Navigator.prop'
 import { useNavigatorState } from './Navigator.hook'
 import styles from './Navigator.scss'
 
-export function Navigator({ headingLeft = defaultProps.headingLeft, headingRight = defaultProps.headingRight }) {
+export function Navigator({ headingLeft, headingRight }) {
   const {
     Navigation: { TabNav, tabNavState },
     Subhead,
