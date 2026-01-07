@@ -21,7 +21,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
             class="mr-2"
             height="16"
             role="img"
-            style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
+            style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"
             viewbox="0 0 16 16"
             width="16"
           />
@@ -5039,7 +5039,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
                 class="mr-2"
                 height="16"
                 role="img"
-                style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
+                style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"
                 viewbox="0 0 16 16"
                 width="16"
               />
@@ -5054,7 +5054,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
                 class="mr-2"
                 height="16"
                 role="img"
-                style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
+                style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"
                 viewbox="0 0 16 16"
                 width="16"
               />
@@ -5084,7 +5084,7 @@ exports[`<ListCarPage /> Render must match regular() 1`] = `
             class="mr-2"
             height="16"
             role="img"
-            style="display: inline-block; fill: currentColor; user-select: none; vertical-align: text-bottom;"
+            style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"
             viewbox="0 0 16 16"
             width="16"
           />
