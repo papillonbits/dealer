@@ -41,7 +41,8 @@ npm un \
   @storybook/addon-themes \
   @storybook/react-webpack5 \
   @svgr/webpack \
-  @testing-library/react \
+  @testing-library/dom @testing-library/react \
+  ajv \
   babel-core \
   babel-jest \
   babel-loader \
@@ -65,6 +66,7 @@ npm un \
   eslint-plugin-jsx-a11y \
   eslint-plugin-prettier \
   eslint-plugin-react \
+  eslint-plugin-react-hooks \
   file-loader \
   gh-pages \
   html-loader \
@@ -127,7 +129,7 @@ npm i -S \
   uuid \
   whatwg-fetch
 
-# Reinstall development dependencies with version pinning
+# Reinstall development dependencies with compatible versions
 npm i -D \
   @axe-core/react \
   @babel/core \
@@ -138,16 +140,17 @@ npm i -D \
   @babel/preset-react \
   @babel/register \
   @babel/runtime \
-  @chromatic-com/storybook \
-  @storybook/addon-a11y@^9.1.16 \
-  @storybook/addon-docs@^9.1.16 \
+  @chromatic-com/storybook@^4.1.3 \
+  @storybook/addon-a11y@^9.1.17 \
+  @storybook/addon-docs@^9.1.17 \
   @storybook/addon-jest \
-  @storybook/addon-links@^9.1.16 \
+  @storybook/addon-links@^9.1.17 \
   @storybook/addon-styling-webpack@^2.0.0 \
-  @storybook/addon-themes@^9.1.16 \
-  @storybook/react-webpack5@^9.1.16 \
+  @storybook/addon-themes@^9.1.17 \
+  @storybook/react-webpack5@^9.1.17 \
   @svgr/webpack \
-  @testing-library/react \
+  @testing-library/dom @testing-library/react \
+  ajv \
   babel-core@^7.0.0-bridge.0 \
   babel-jest \
   babel-loader \
@@ -162,7 +165,7 @@ npm i -D \
   dotenv \
   dotenv-cli \
   dotenv-webpack \
-  eslint \
+  eslint@^8.57.1 \
   eslint-config-airbnb \
   eslint-config-prettier \
   eslint-import-resolver-alias \
@@ -171,6 +174,7 @@ npm i -D \
   eslint-plugin-jsx-a11y \
   eslint-plugin-prettier \
   eslint-plugin-react \
+  eslint-plugin-react-hooks \
   file-loader \
   gh-pages \
   html-loader \
@@ -197,7 +201,7 @@ npm i -D \
   regenerator-runtime \
   sass \
   sass-loader \
-  storybook@^9.1.16 \
+  storybook@^9.1.17 \
   style-loader \
   stylelint \
   stylelint-config-standard \
