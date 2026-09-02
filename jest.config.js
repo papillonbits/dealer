@@ -2,7 +2,7 @@
 /* eslint-disable prefer-destructuring */
 const getJestSetup = require('@papillonbits/setup/jest').getJestSetup
 
-const testPathIgnorePatterns = process.env.NODE_ENV === 'test' ? ['packages/core/webpack/webpack.test.babel.js'] : ['packages/core']
+const testPathIgnorePatterns = process.env.NODE_ENV === 'test' ? ['packages/core/webpack/webpack.test.js'] : ['packages/core']
 const coverageDirectory = './.coverage/'
 const collectCoverage = process.env.NODE_ENV === 'test'
 const collectCoverageFrom = [

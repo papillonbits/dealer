@@ -1,30 +1,26 @@
 /* eslint-disable import/no-dynamic-require, global-require */
 const mockRequireListCarPage = () => {
-  const listCarPagePath = '../../pattern/page/ListCarPage'
-  jest.mock(listCarPagePath, () => 'ListCarPage')
-  return require(listCarPagePath)
+  jest.mock('../../pattern/page/ListCarPage', () => 'ListCarPage')
+  return require('../../pattern/page/ListCarPage')
 }
 
 const mockRequireBestCarPage = () => {
-  const bestCarPagePath = '../../pattern/page/BestCarPage'
-  jest.mock(bestCarPagePath, () => 'BestCarPage')
-  return require(bestCarPagePath)
+  jest.mock('../../pattern/page/BestCarPage', () => 'BestCarPage')
+  return require('../../pattern/page/BestCarPage')
 }
 
 const mockRequireNotFoundPage = () => {
-  const notFoundPagePath = '../../pattern/page/NotFoundPage'
-  jest.mock(notFoundPagePath, () => 'NotFoundPage')
-  return require(notFoundPagePath)
+  jest.mock('../../pattern/page/NotFoundPage', () => 'NotFoundPage')
+  return require('../../pattern/page/NotFoundPage')
 }
 
 const mockRequirePath = () => {
-  const pathPath = '../path'
-  jest.mock(pathPath, () => ({
+  jest.mock('../path', () => ({
     appRootPath: 'fantastic-app-root-path',
     listCarPagePath: 'fantastic-list-car-page-path',
     bestCarPagePath: 'fantastic-best-car-page-path',
   }))
-  return require(pathPath)
+  return require('../path')
 }
 
 describe('index', () => {
